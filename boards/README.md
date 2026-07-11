@@ -1,4 +1,4 @@
-# Protomesh Boards
+# Boards
 
 Protomesh nodes utilize the following mainboards:
 * [Heltec ESP32v4](https://heltec.org/project/wifi-lora-32-v4/)
