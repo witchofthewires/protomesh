@@ -9,3 +9,4 @@ The Protomesh Collective is an antiprofit formation that builds low-cost Meshtas
 ## Join the Collective!
 
 ## Acknowledgments
+* [gargomoma](https://github.com/gargomoma/) for starting the [FakeTec](https://github.com/gargomoma/fakeTec_pcb) project, and [lupuxworax](https://github.com/lupusworax/) for creating the v4 version used in this project
