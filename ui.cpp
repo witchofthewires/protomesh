@@ -17,9 +17,9 @@
 
 #include "ui.h"
 
-static lv_obj_t *preheat_temp_label, *preheat_label, *soak_label, *reflow_label;
-static lv_obj_t *color_rect;
-static lv_obj_t *color_name;
+static lv_obj_t *preheat_label, *soak_label, *reflow_label, *preheat_temp_label, *soak_temp_label, *reflow_temp_label, *preheat_time_label, *soak_time_label, *reflow_time_label;
+static lv_obj_t *confirm_button;
+static lv_obj_t *confirm_text_label;
 
 // Move the "Hello, world!" label so it's centered on wherever the screen is
 // being touched.  Fires continuously while pressed, so it tracks a drag too.
@@ -42,13 +42,9 @@ static void color_cycle_cb(lv_timer_t *t) {
     static const char    *names[3]  = { "RED", "GREEN", "BLUE" };
     static int i = 0;
 
-    lv_obj_set_style_bg_color(color_rect, lv_color_hex(colors[i]), 0);
-    lv_label_set_text(color_name, names[i]);
+    lv_obj_set_style_bg_color(confirm_button, lv_color_hex(colors[i]), 0);
+    lv_label_set_text(confirm_text_label, names[i]);
     i = (i + 1) % 3;
-}
-
-void writeText(int x, int y, int w, int h, int justification, uint16_t textColor, uint16_t bgTextColor, char *text, int8_t xOffset, bool fullLinePadding) {
-
 }
 
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification) {
@@ -57,46 +53,42 @@ void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_
     lv_obj_align(label, justification, x, y);
 }
 
+void draw_button(lv_obj_t *screen, lv_obj_t *button) {
+    lv_obj_set_size(button, 200, 90);
+    lv_obj_align(button, LV_ALIGN_TOP_MID, 0, 170);
+    lv_obj_set_style_bg_opa(button, LV_OPA_COVER, 0);
+    lv_obj_set_style_border_width(button, 0, 0);
+    lv_obj_remove_flag(button, LV_OBJ_FLAG_SCROLLABLE);
+    // Don't let the rectangle eat touches meant for the "follow" behavior.
+    lv_obj_remove_flag(button, LV_OBJ_FLAG_CLICKABLE);
+}
+
+void draw_setup_menu(lv_obj_t *screen) {
+    write_text(screen, preheat_label, "preheat", -50, 20, LV_ALIGN_TOP_MID);
+    write_text(screen, soak_label, "soak", 0, 20, LV_ALIGN_TOP_MID);
+    write_text(screen, reflow_label, "reflow", 50, 20, LV_ALIGN_TOP_MID);
+    write_text(screen, preheat_temp_label, "300C", -50, 70, LV_ALIGN_TOP_MID);
+    write_text(screen, soak_temp_label, "350C", 0, 70, LV_ALIGN_TOP_MID);
+    write_text(screen, reflow_temp_label, "400C", 50, 70, LV_ALIGN_TOP_MID);
+    write_text(screen, preheat_time_label, "1m", -50, 120, LV_ALIGN_TOP_MID);
+    write_text(screen, soak_time_label, "2m", 0, 120, LV_ALIGN_TOP_MID);
+    write_text(screen, reflow_time_label, "3m", 50, 120, LV_ALIGN_TOP_MID);
+}
+
 void ui_init(void) {
     // The screen LVGL created for us.  Everything we draw is a child of this.
     lv_obj_t *screen = lv_screen_active();
+    draw_setup_menu(screen);
+    
+    confirm_button = lv_obj_create(screen);
+    draw_button(screen, confirm_button);
 
-    // The roaming "Hello, world!" label.  Uses absolute positioning (default
-    // top-left alignment) so follow_touch_cb can place it by screen coords.
-    preheat_label = lv_label_create(screen);
-    soak_label = lv_label_create(screen);
-    reflow_label = lv_label_create(screen);
-    lv_label_set_text(preheat_label, "preheat");
-    lv_label_set_text(soak_label, "soak");
-    lv_label_set_text(reflow_label, "reflow");
-    lv_obj_align(preheat_label, LV_ALIGN_TOP_MID, -50, 20);
-    lv_obj_align(soak_label, LV_ALIGN_TOP_MID, 0, 20);
-    lv_obj_align(reflow_label, LV_ALIGN_TOP_MID, 50, 20);
-    write_text(screen, preheat_temp_label, "300", -50, 70, LV_ALIGN_TOP_MID);
-    //lv_obj_update_layout(hello_label);     // so get_width/height are valid
-
+    confirm_text_label = lv_label_create(confirm_button);
+    lv_obj_set_style_text_color(confirm_text_label, lv_color_white(), 0);    
+    lv_obj_set_style_bg_color(confirm_button, lv_color_hex(0xFF0000), 0);
+    lv_obj_center(confirm_text_label);
+    lv_label_set_text(confirm_text_label, "CONFIRM");
 /*
-    // Color-test rectangle near the top.
-    color_rect = lv_obj_create(screen);
-    lv_obj_set_size(color_rect, 200, 90);
-    lv_obj_align(color_rect, LV_ALIGN_TOP_MID, 0, 20);
-    lv_obj_set_style_bg_opa(color_rect, LV_OPA_COVER, 0);
-    lv_obj_set_style_border_width(color_rect, 0, 0);
-    lv_obj_remove_flag(color_rect, LV_OBJ_FLAG_SCROLLABLE);
-    // Don't let the rectangle eat touches meant for the "follow" behavior.
-    lv_obj_remove_flag(color_rect, LV_OBJ_FLAG_CLICKABLE);
-
-    // Label naming the current color (white text, drawn over the rectangle).
-    color_name = lv_label_create(color_rect);
-    lv_obj_set_style_text_color(color_name, lv_color_white(), 0);
-    lv_obj_center(color_name);
-    lv_label_set_text(color_name, "RED");
-
-    // The roaming "Hello, world!" label.  Uses absolute positioning (default
-    // top-left alignment) so follow_touch_cb can place it by screen coords.
-    hello_label = lv_label_create(screen);
-    lv_label_set_text(hello_label, "protomesh");
-    lv_obj_update_layout(hello_label);     // so get_width/height are valid
 
     lv_display_t *disp = lv_display_get_default();
     lv_coord_t scr_w = lv_display_get_horizontal_resolution(disp);
