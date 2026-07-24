@@ -17,7 +17,7 @@
 
 #include "ui.h"
 
-static lv_obj_t *hello_label;
+static lv_obj_t *preheat_temp_label, *preheat_label, *soak_label, *reflow_label;
 static lv_obj_t *color_rect;
 static lv_obj_t *color_name;
 
@@ -29,10 +29,11 @@ static void follow_touch_cb(lv_event_t *e) {
 
     lv_point_t p;
     lv_indev_get_point(indev, &p);
-
+/*
     lv_coord_t w = lv_obj_get_width(hello_label);
     lv_coord_t h = lv_obj_get_height(hello_label);
     lv_obj_set_pos(hello_label, p.x - w / 2, p.y - h / 2);
+    */
 }
 
 // Cycle the test rectangle through pure red, green, and blue.
@@ -46,10 +47,35 @@ static void color_cycle_cb(lv_timer_t *t) {
     i = (i + 1) % 3;
 }
 
+void writeText(int x, int y, int w, int h, int justification, uint16_t textColor, uint16_t bgTextColor, char *text, int8_t xOffset, bool fullLinePadding) {
+
+}
+
+void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification) {
+    label = lv_label_create(screen);
+    lv_label_set_text(label, text);
+    lv_obj_align(label, justification, x, y);
+}
+
 void ui_init(void) {
     // The screen LVGL created for us.  Everything we draw is a child of this.
     lv_obj_t *screen = lv_screen_active();
 
+    // The roaming "Hello, world!" label.  Uses absolute positioning (default
+    // top-left alignment) so follow_touch_cb can place it by screen coords.
+    preheat_label = lv_label_create(screen);
+    soak_label = lv_label_create(screen);
+    reflow_label = lv_label_create(screen);
+    lv_label_set_text(preheat_label, "preheat");
+    lv_label_set_text(soak_label, "soak");
+    lv_label_set_text(reflow_label, "reflow");
+    lv_obj_align(preheat_label, LV_ALIGN_TOP_MID, -50, 20);
+    lv_obj_align(soak_label, LV_ALIGN_TOP_MID, 0, 20);
+    lv_obj_align(reflow_label, LV_ALIGN_TOP_MID, 50, 20);
+    write_text(screen, preheat_temp_label, "300", -50, 70, LV_ALIGN_TOP_MID);
+    //lv_obj_update_layout(hello_label);     // so get_width/height are valid
+
+/*
     // Color-test rectangle near the top.
     color_rect = lv_obj_create(screen);
     lv_obj_set_size(color_rect, 200, 90);
@@ -91,4 +117,5 @@ void ui_init(void) {
 
     // From here, add your own screens, widgets, and event handlers.
     // See https://docs.lvgl.io/ for the LVGL widget reference.
+    */
 }
