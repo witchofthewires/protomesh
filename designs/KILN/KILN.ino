@@ -27,6 +27,7 @@
 #include "lv_conf.h"
 #include "lvgl.h"
 #include "lv_setup.hpp"
+#include "max6675.h"
 
 // Fonts
 // The Montserrat font is built into LVGL in multiple sizes, each size takes up memory.
@@ -40,26 +41,36 @@
 // Build your own application by editing ui_init() in ui.cpp.
 #include "ui.h"
 
+//int SCK = 18;
+int SO = 19;
+int CS = 21; 
 int RELAY_SIGNAL = 25;
 int RELAY_STATE = LOW;
+MAX6675 thermocouple(SCK, CS, SO);
+
+void relayWrite(int pin, int state) {
+    digitalWrite(pin, state);
+    Serial.printf("[RELAY] Pin %d set to %d\n", pin, state);
+}
 
 void setup() {
 
-    
+    int baud = 115200;
+    Serial.begin(baud);
+    Serial.printf("\n[ESP32] Serial initialized at %d baud\n", baud);
+
+    Serial.printf("[SPI] MOSI pin %d, MISO pin %d, SCK pin %d, CS pin %d\n", MOSI, MISO, SCK, CS);
+
     // initialize relay pins
     //pinMode(RELAY_GND, OUTPUT);
     //digitalWrite(RELAY_GND, LOW);
     pinMode(RELAY_SIGNAL, OUTPUT);
-    digitalWrite(RELAY_SIGNAL, RELAY_STATE);
-    
-    int baud = 115200;
-    Serial.begin(baud);
-    Serial.printf("\nESP32: Serial initialized at %d baud\n", baud);
+    relayWrite(RELAY_SIGNAL, RELAY_STATE);
 
     // Initialize display, touch, and LVGL.  Defaults to portrait; pass a
     // rotation to change it (0/2 = portrait, 1/3 = landscape; see header).
     lv_setup.begin(1);
-    Serial.printf("ESP32: LVGL initialized with %dx%d touchscreen\n",
+    Serial.printf("[ESP32] LVGL initialized with %dx%d touchscreen\n",
                   display.width(), display.height());
 
     // Resistive touch varies between panels.  If touch lands in the wrong
@@ -68,7 +79,7 @@ void setup() {
 
     // Start the application's own setup
     ui_init();
-    Serial.printf("ESP32: UI initialized");
+    Serial.printf("[ESP32] UI initialized\n");
 }
 
 
@@ -80,6 +91,6 @@ void loop() {
     }
     
     RELAY_STATE ^= HIGH;
-    digitalWrite(RELAY_SIGNAL, RELAY_STATE);
-    Serial.printf("RELAY: Pin %d set to %d\n", RELAY_SIGNAL, RELAY_STATE);
+    relayWrite(RELAY_SIGNAL, RELAY_STATE);
+    Serial.printf("[MAX6675] Temperature: %f deg C | %f deg F\n", thermocouple.readCelsius(), thermocouple.readFahrenheit());
 }
