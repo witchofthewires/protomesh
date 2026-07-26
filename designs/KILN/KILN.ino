@@ -52,13 +52,26 @@
 // Build your own application by editing ui_init() in ui.cpp.
 #include "ui.h"
 
+int RELAY_SIGNAL = 25;
+int RELAY_STATE = LOW;
+
 void setup() {
-    Serial.begin(115200);
+
+    
+    // initialize relay pins
+    //pinMode(RELAY_GND, OUTPUT);
+    //digitalWrite(RELAY_GND, LOW);
+    pinMode(RELAY_SIGNAL, OUTPUT);
+    digitalWrite(RELAY_SIGNAL, RELAY_STATE);
+    
+    int baud = 115200;
+    Serial.begin(baud);
+    Serial.printf("\nESP32: Serial initialized at %d baud\n", baud);
 
     // Initialize display, touch, and LVGL.  Defaults to portrait; pass a
     // rotation to change it (0/2 = portrait, 1/3 = landscape; see header).
     lv_setup.begin();
-    Serial.printf("Dani's LVGL initialized with %dx%d touchscreen\n",
+    Serial.printf("ESP32: LVGL initialized with %dx%d touchscreen\n",
                   display.width(), display.height());
 
     // Resistive touch varies between panels.  If touch lands in the wrong
@@ -67,11 +80,18 @@ void setup() {
 
     // Start the application's own setup
     ui_init();
+    Serial.printf("ESP32: UI initialized");
 }
 
 
 void loop() {
     // Give loop control to LVGL objects created by the application
-    lv_timer_handler();
-    delay(5);
+    for (int i=0; i<200; i++) {
+      lv_timer_handler();
+      delay(5);
+    }
+    
+    RELAY_STATE ^= HIGH;
+    digitalWrite(RELAY_SIGNAL, RELAY_STATE);
+    Serial.printf("RELAY: Pin %d set to %d\n", RELAY_SIGNAL, RELAY_STATE);
 }
