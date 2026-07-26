@@ -1,25 +1,13 @@
 /*******************************************************************************
- * ESP32-32E 4" LVGL Claude Code Stub
- *
- * For the ESP32-32E 4.0" touch LCD (ST7796 320x480 + XPT2046 touch,
+ * built from https://github.com/chipguyhere/ESP32-32E_4inch_display
+ * for the ESP32-32E 4.0" touch LCD (ST7796 320x480 + XPT2046 touch,
  * display and touch sharing one SPI bus).
- *
- * A minimal starting point for building an LVGL application from scratch on
- * this hardware.  The UI lives in a tiny ui.h / ui.cpp pair in the sketch
- * folder that draws a simple "Hello, world!" screen.
- *
- * The intent is to hand this to Claude Code (or any developer) as a clean
- * scaffold: the display, touch, and LVGL plumbing is already wired up, so you
- * can focus on writing your own UI in ui.cpp.  Just replace the contents of
- * ui_init() with your own widgets and grow from there.
  *
  * Orientation: lv_setup.begin(rotation) accepts 0 = portrait (320x480, the
  * ST7796's native orientation), 1 = landscape (480x320), 2 = portrait
  * flipped, 3 = landscape flipped (degrees 90/180/270 work as aliases for
  * 1/2/3).  This sketch defaults to portrait; change the argument below to
  * rotate.  Display and touch rotate together.
- *
- * Demonstrates touchscreen, LVGL and a hand-written UI.
  *
  * Compatible with LVGL 9; the bundled lv_conf.h is based on LVGL 9.3.  If your
  * installed LVGL differs, the API is generally close enough to adapt.
@@ -70,7 +58,7 @@ void setup() {
 
     // Initialize display, touch, and LVGL.  Defaults to portrait; pass a
     // rotation to change it (0/2 = portrait, 1/3 = landscape; see header).
-    lv_setup.begin();
+    lv_setup.begin(1);
     Serial.printf("ESP32: LVGL initialized with %dx%d touchscreen\n",
                   display.width(), display.height());
 
