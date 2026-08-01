@@ -1,8 +1,8 @@
 # Boards
 
 Protomesh nodes utilize the following mainboards:
-* [Heltec ESP32v4](https://heltec.org/project/wifi-lora-32-v4/)
-* [Heltec T114](https://heltec.org/project/mesh-node-t114/)
+* [Heltec ESP32v4](https://heltec.org/project/wifi-lora-32-v4/), used in the [NOMAD](../designs/NOMAD).
+* [Heltec T114](https://heltec.org/project/mesh-node-t114/), used in the [HACKERSBLOOM](../designs/HACKERSBLOOM).
 * FakeTec v4
 
 ### FakeTec v4
