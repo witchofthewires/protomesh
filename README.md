@@ -3,10 +3,10 @@ The Protomesh Collective is an antiprofit formation that builds low-cost Meshtas
 
 ## Designs 
 ### Meshtastic Nodes
-* [NOMAD](./designs/NOMAD/README.md) - A Heltec ESP32v4-based handheld mobile node intended for everyday carry.
-* [HACKERSBLOOM](./designs/HACKERSBLOOM/README.md) - A Heltec T114-based waterproof solar node built from a repurposed 1W Harbor Breeze solar light available at Lowe's.
+* [NOMAD](./designs/NOMAD) - A Heltec ESP32v4-based handheld mobile node intended for everyday carry.
+* [HACKERSBLOOM](./designs/HACKERSBLOOM) - A Heltec T114-based waterproof solar node built from a repurposed 1W Harbor Breeze solar light available at Lowe's.
 ### Fabrication Equipment
-* [KILN](./designs/KILN/README.md) - A DIY solder reflow oven with touchscreen interface and Wifi/Bluetooth connectivity, and associated firmware.
+* [KILN](./designs/KILN) - A DIY solder reflow oven with touchscreen interface and Wifi/Bluetooth connectivity, and associated firmware.
   
 ## Join the Collective!
 
