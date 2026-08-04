@@ -7,6 +7,18 @@
 4. plug those into left power bus on breadboard. plug VCC and GND on MAX6675 into this bus.
 5. plug 4-prong JST? cable into SPI jack. connect MISO to MAX6675 SO, SCK to SCK, CS to CS.
 
+### Project Box Dimensions
+- [ESP32R35T Schematic Drawing](https://www.lcdwiki.com/res/E32R35T/E32R35T_Size.pdf)
+- [Crydom SSR Mechanical Specifications](https://www.sensata.com/sites/default/files/a/sensata-series-1-240-ac-panel-mount-ssr-datasheet.pdf)
+
+screen 101.5x55.5x5.8
+relay 57.3x44.5x22.6
+
+157.59x61.56x38.1= 1/8 ft x (D * phi) x (D * phi^2)
+
+38.1 - (22.6 + 5.8) = 9.7
+
+157.59 - (101.5 + 44.5) = 11.59
 ## Dev
 Use the Arduino IDE
 ### Board Configuration
