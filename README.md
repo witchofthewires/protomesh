@@ -17,3 +17,4 @@ The Protomesh Collective would like to thank:
 * [gargomoma](https://github.com/gargomoma/) for starting the [FakeTec](https://github.com/gargomoma/fakeTec_pcb) project, and [lupusworax](https://github.com/lupusworax/) for creating the Heltec v4 PCB design used in this project
 * Krohsis for his Steven's Stinger [v2](https://youtu.be/KlO1MGENUPs?si=rEUcjGCvlDSrAl1E) and [v3](https://intofpv.com/t-gen-3-sleeve-antenna-for-915mhz) build guides
 * tavdog (Tavis Gustafson) for the detailed [solar node design & build instructions](https://meshtastic.org/docs/community/enclosures/rak/harbor-breeze-solar-hack/) available at meshtastic.org, which serves as the foundation for the HACKERSBLOOM solar node.
+* LCDWiki for their wealth of resources for the [3.5in ESP32-32E Display](https://www.lcdwiki.com/3.5inch_ESP32-32E_Display)
