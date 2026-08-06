@@ -12,7 +12,25 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs7" />
+     id="defs7">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect7"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
   <sodipodi:namedview
      id="namedview7"
      pagecolor="#505050"
@@ -24,15 +42,35 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="true"
-     inkscape:zoom="1.0190372"
-     inkscape:cx="400.37792"
-     inkscape:cy="515.68284"
+     inkscape:zoom="1.1024868"
+     inkscape:cx="439.46104"
+     inkscape:cy="564.63261"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="1076"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="g10"
+     showgrid="false">
+    <inkscape:grid
+       id="grid8"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999999"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <g
+     id="g8"
+     inkscape:label="screen_holes"
+     transform="translate(453.4761,361.31213)" />
   <rect
      x="0.5"
      y="0.5"
@@ -49,16 +87,8 @@
        stroke="#000000"
        stroke-width="0.1"
        fill="none"
-       id="path1" />
-    <rect
-       x="51.621632"
-       y="80.490257"
-       width="101.5"
-       height="55.5"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="rect6-9" />
+       id="path1"
+       inkscape:label="path1" />
     <rect
        x="183.94365"
        y="79.970818"
@@ -125,5 +155,63 @@
        stroke-width="0.1"
        fill="none"
        id="rect6" />
+  </g>
+  <g
+     id="g10"
+     inkscape:label="screen">
+    <rect
+       x="51.621632"
+       y="80.490257"
+       width="101.5"
+       height="55.5"
+       stroke="#000000"
+       stroke-width="0.1"
+       fill="none"
+       id="pcb_size"
+       style="display:none;stroke:none;stroke-width:0;stroke-dasharray:none" />
+    <g
+       id="g9"
+       inkscape:label="screen_mounting_holes"
+       transform="translate(-148.37837,-94.20974)">
+      <circle
+         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         id="path9"
+         cx="298"
+         cy="226.39999"
+         r="3.5"
+         inkscape:label="hole_br" />
+      <circle
+         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         id="path9-5"
+         cx="203.5"
+         cy="226.39999"
+         r="3.5"
+         inkscape:label="hole_bl" />
+      <circle
+         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         id="path9-1"
+         cx="298"
+         cy="178.5"
+         r="3.5"
+         inkscape:label="hole_tr" />
+      <circle
+         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         id="path9-11"
+         cx="203.5"
+         cy="178.5"
+         r="3.5"
+         inkscape:label="hole_tl" />
+    </g>
+    <rect
+       style="fill:#ff0000;stroke-width:0.264583"
+       id="touchscreen_cutout"
+       width="73.440002"
+       height="48.959999"
+       x="-139.09163"
+       y="-132.72026"
+       sodipodi:type="rect"
+       inkscape:label="holes_align"
+       transform="scale(-1)"
+       ry="0" />
   </g>
 </svg>
