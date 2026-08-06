@@ -44,13 +44,13 @@
      showguides="true"
      inkscape:zoom="1.1024868"
      inkscape:cx="439.46104"
-     inkscape:cy="564.63261"
+     inkscape:cy="637.19584"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="1076"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g10"
+     inkscape:current-layer="svg7"
      showgrid="false">
     <inkscape:grid
        id="grid8"
@@ -158,7 +158,8 @@
   </g>
   <g
      id="g10"
-     inkscape:label="screen">
+     inkscape:label="screen"
+     style="fill:none">
     <rect
        x="51.621632"
        y="80.490257"
@@ -168,34 +169,35 @@
        stroke-width="0.1"
        fill="none"
        id="pcb_size"
-       style="display:none;stroke:none;stroke-width:0;stroke-dasharray:none" />
+       style="display:none;stroke:none;stroke-width:0;stroke-dasharray:none;fill:none" />
     <g
        id="g9"
        inkscape:label="screen_mounting_holes"
-       transform="translate(-148.37837,-94.20974)">
+       transform="translate(-148.37837,-94.20974)"
+       style="fill:none">
       <circle
-         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         style="fill:none;fill-opacity:1;stroke-width:0.264583"
          id="path9"
          cx="298"
          cy="226.39999"
          r="3.5"
          inkscape:label="hole_br" />
       <circle
-         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         style="fill:none;fill-opacity:1;stroke-width:0.264583"
          id="path9-5"
          cx="203.5"
          cy="226.39999"
          r="3.5"
          inkscape:label="hole_bl" />
       <circle
-         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         style="fill:none;fill-opacity:1;stroke-width:0.264583"
          id="path9-1"
          cx="298"
          cy="178.5"
          r="3.5"
          inkscape:label="hole_tr" />
       <circle
-         style="fill:#d80000;fill-opacity:1;stroke-width:0.264583"
+         style="fill:none;fill-opacity:1;stroke-width:0.264583"
          id="path9-11"
          cx="203.5"
          cy="178.5"
@@ -203,7 +205,7 @@
          inkscape:label="hole_tl" />
     </g>
     <rect
-       style="fill:#ff0000;stroke-width:0.264583"
+       style="fill:none;stroke-width:0.264583"
        id="touchscreen_cutout"
        width="73.440002"
        height="48.959999"
