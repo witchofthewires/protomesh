@@ -41,16 +41,16 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     showguides="true"
-     inkscape:zoom="0.5512434"
-     inkscape:cx="592.29734"
-     inkscape:cy="595.9255"
+     showguides="false"
+     inkscape:zoom="1.1024868"
+     inkscape:cx="772.34485"
+     inkscape:cy="369.61894"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="1076"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g2"
+     inkscape:current-layer="g3"
      showgrid="false">
     <inkscape:grid
        id="grid8"
@@ -156,6 +156,13 @@
          inkscape:label="lcd_aa_cutout"
          transform="scale(-1)"
          ry="0" />
+      <circle
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+         id="path9-11-2"
+         cx="271.65521"
+         cy="222.70729"
+         r="3.5"
+         inkscape:label="hole_tl_cutout" />
     </g>
   </g>
   <g
@@ -176,6 +183,41 @@
        stroke-width="0.1"
        fill="none"
        id="rect6-8" />
+    <g
+       id="g12"
+       inkscape:label="c14_cutout"
+       transform="translate(35.998163,-5.0397429)">
+      <g
+         id="g11"
+         inkscape:label="c14_mount_cutout"
+         style="fill:none"
+         transform="translate(-70.595108,-53.277282)">
+        <circle
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+           id="path9-11-6"
+           cx="361.89615"
+           cy="181.11394"
+           inkscape:label="c14_left_mount_cutout"
+           r="2" />
+        <circle
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+           id="path9-11-6-4"
+           cx="313.63156"
+           cy="181.11394"
+           inkscape:label="c14_left_mount_cutout"
+           r="2" />
+      </g>
+      <rect
+         x="251.66875"
+         y="116.33665"
+         width="31"
+         height="23"
+         stroke="#000000"
+         stroke-width="0.1"
+         fill="none"
+         id="rect6-8-3"
+         inkscape:label="c14_plug_cutout" />
+    </g>
   </g>
   <g
      id="g4"
