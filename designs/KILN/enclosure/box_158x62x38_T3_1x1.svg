@@ -42,9 +42,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="1.1024868"
-     inkscape:cx="772.34485"
-     inkscape:cy="369.61894"
+     inkscape:zoom="0.5512434"
+     inkscape:cx="13.605605"
+     inkscape:cy="575.97061"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -174,15 +174,30 @@
        stroke-width="0.1"
        fill="none"
        id="path3" />
-    <rect
-       x="183.94365"
-       y="79.970818"
-       width="44.5"
-       height="57.299999"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="rect6-8" />
+    <g
+       id="g7"
+       inkscape:label="heatsink">
+      <rect
+         x="83.255096"
+         y="-246.55905"
+         width="49.891747"
+         height="59.891747"
+         stroke="#000000"
+         stroke-width="0.108254"
+         fill="none"
+         id="rect6-8"
+         inkscape:label="heatsink_full_dimensions"
+         transform="rotate(90)"
+         style="display:none" />
+      <rect
+         style="fill:none;stroke-width:0.998734"
+         id="rect1"
+         width="5"
+         height="54.099998"
+         x="214.11317"
+         y="79.099998"
+         inkscape:label="heatsink_spine_cutout" />
+    </g>
     <g
        id="g12"
        inkscape:label="c14_cutout"
