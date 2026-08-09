@@ -50,7 +50,7 @@
      inkscape:window-x="1912"
      inkscape:window-y="1076"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g5"
+     inkscape:current-layer="g4"
      showgrid="false">
     <inkscape:grid
        id="grid8"
@@ -209,6 +209,15 @@
        stroke-width="0.1"
        fill="none"
        id="path4" />
+    <rect
+       style="fill:none;stroke-width:1"
+       id="rect7"
+       width="24"
+       height="24"
+       x="255.39629"
+       y="-126.60548"
+       transform="rotate(90)"
+       inkscape:label="oven_plug_cutout" />
   </g>
   <g
      id="g5"
