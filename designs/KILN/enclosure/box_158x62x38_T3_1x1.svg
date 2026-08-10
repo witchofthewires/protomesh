@@ -43,14 +43,14 @@
      inkscape:document-units="mm"
      showguides="false"
      inkscape:zoom="0.5512434"
-     inkscape:cx="13.605605"
-     inkscape:cy="575.97061"
+     inkscape:cx="815.42926"
+     inkscape:cy="300.23035"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="1076"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g4"
+     inkscape:current-layer="g8"
      showgrid="false">
     <inkscape:grid
        id="grid8"
@@ -68,213 +68,221 @@
        visible="false" />
   </sodipodi:namedview>
   <g
-     id="g1"
-     inkscape:label="bottom_panel">
-    <path
-       d="M 10 18 L 18.9171 18 L 18.9671 18 L 18.9671 15 L 27.7841 15 L 27.7841 18 L 27.8341 18 L 36.7512 18 L 36.8012 18 L 36.8012 15 L 45.6182 15 L 45.6182 18 L 45.6682 18 L 54.5853 18 L 54.6353 18 L 54.6353 15 L 63.4524 15 L 63.4524 18 L 63.5024 18 L 72.4194 18 L 72.4694 18 L 72.4694 15 L 81.2865 15 L 81.2865 18 L 81.3365 18 L 90.2535 18 L 90.3035 18 L 90.3035 15 L 99.1206 15 L 99.1206 18 L 99.1706 18 L 108.0876 18 L 108.1376 18 L 108.1376 15 L 116.9547 15 L 116.9547 18 L 117.0047 18 L 125.9218 18 L 125.9718 18 L 125.9718 15 L 134.7888 15 L 134.7888 18 L 134.8388 18 L 143.7559 18 L 143.8059 18 L 143.8059 15 L 152.6229 15 L 152.6229 18 L 152.6729 18 L 161.59 18 L 161.59 24.42 L 161.59 24.47 L 164.59 24.47 L 164.59 30.79 L 161.59 30.79 L 161.59 30.84 L 161.59 37.26 L 161.59 37.31 L 164.59 37.31 L 164.59 43.63 L 161.59 43.63 L 161.59 43.68 L 161.59 50.1 L 152.6729 50.1 L 152.6229 50.1 L 152.6229 53.1 L 143.8059 53.1 L 143.8059 50.1 L 143.7559 50.1 L 134.8388 50.1 L 134.7888 50.1 L 134.7888 53.1 L 125.9718 53.1 L 125.9718 50.1 L 125.9218 50.1 L 117.0047 50.1 L 116.9547 50.1 L 116.9547 53.1 L 108.1376 53.1 L 108.1376 50.1 L 108.0876 50.1 L 99.1706 50.1 L 99.1206 50.1 L 99.1206 53.1 L 90.3035 53.1 L 90.3035 50.1 L 90.2535 50.1 L 81.3365 50.1 L 81.2865 50.1 L 81.2865 53.1 L 72.4694 53.1 L 72.4694 50.1 L 72.4194 50.1 L 63.5024 50.1 L 63.4524 50.1 L 63.4524 53.1 L 54.6353 53.1 L 54.6353 50.1 L 54.5853 50.1 L 45.6682 50.1 L 45.6182 50.1 L 45.6182 53.1 L 36.8012 53.1 L 36.8012 50.1 L 36.7512 50.1 L 27.8341 50.1 L 27.7841 50.1 L 27.7841 53.1 L 18.9671 53.1 L 18.9671 50.1 L 18.9171 50.1 L 10 50.1 L 10 43.68 L 10 43.63 L 7 43.63 L 7 37.31 L 10 37.31 L 10 37.26 L 10 30.84 L 10 30.79 L 7 30.79 L 7 24.47 L 10 24.47 L 10 24.42 L 10 18 Z"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="path1"
-       inkscape:label="path1" />
-  </g>
-  <g
-     id="g2"
-     inkscape:label="front_panel">
-    <rect
-       x="24.33725"
-       y="115.96358"
-       width="12.5"
-       height="19"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="rect6-2"
-       inkscape:label="switch_cutout" />
-    <path
-       d="M 10 79.1 L 161.59 79.1 L 161.59 79.15 L 164.59 79.15 L 164.59 87.4157 L 161.59 87.4157 L 161.59 87.4657 L 161.59 95.8314 L 161.59 95.8814 L 164.59 95.8814 L 164.59 104.1471 L 161.59 104.1471 L 161.59 104.1971 L 161.59 112.5629 L 161.59 112.6129 L 164.59 112.6129 L 164.59 120.8786 L 161.59 120.8786 L 161.59 120.9286 L 161.59 129.2943 L 161.59 129.3443 L 164.59 129.3443 L 164.59 137.61 L 164.59 137.66 L 164.59 140.66 L 152.6729 140.66 L 152.6229 140.66 L 152.6229 137.66 L 143.8059 137.66 L 143.8059 140.66 L 143.7559 140.66 L 134.8388 140.66 L 134.7888 140.66 L 134.7888 137.66 L 125.9718 137.66 L 125.9718 140.66 L 125.9218 140.66 L 117.0047 140.66 L 116.9547 140.66 L 116.9547 137.66 L 108.1376 137.66 L 108.1376 140.66 L 108.0876 140.66 L 99.1706 140.66 L 99.1206 140.66 L 99.1206 137.66 L 90.3035 137.66 L 90.3035 140.66 L 90.2535 140.66 L 81.3365 140.66 L 81.2865 140.66 L 81.2865 137.66 L 72.4694 137.66 L 72.4694 140.66 L 72.4194 140.66 L 63.5024 140.66 L 63.4524 140.66 L 63.4524 137.66 L 54.6353 137.66 L 54.6353 140.66 L 54.5853 140.66 L 45.6682 140.66 L 45.6182 140.66 L 45.6182 137.66 L 36.8012 137.66 L 36.8012 140.66 L 36.7512 140.66 L 27.8341 140.66 L 27.7841 140.66 L 27.7841 137.66 L 18.9671 137.66 L 18.9671 140.66 L 18.9171 140.66 L 10 140.66 L 7 140.66 L 7 137.66 L 7 137.61 L 7 129.3443 L 10 129.3443 L 10 129.2943 L 10 120.9286 L 10 120.8786 L 7 120.8786 L 7 112.6129 L 10 112.6129 L 10 112.5629 L 10 104.1971 L 10 104.1471 L 7 104.1471 L 7 95.8814 L 10 95.8814 L 10 95.8314 L 10 87.4657 L 10 87.4157 L 7 87.4157 L 7 79.15 L 10 79.15 L 10 79.1 Z"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="path2" />
+     id="g8"
+     inkscape:label="enclosure_panels"
+     transform="translate(-0.710318,-5.1105019)">
     <g
-       id="g10"
-       inkscape:label="screen"
-       style="fill:none">
-      <rect
-         x="51.621632"
-         y="80.490257"
-         width="101.5"
-         height="55.5"
+       id="g1"
+       inkscape:label="bottom_panel"
+       transform="translate(-6.2396816,-9.8394981)">
+      <path
+         d="m 10,18 h 8.9171 0.05 v -3 h 8.817 v 3 h 0.05 8.9171 0.05 v -3 h 8.817 v 3 h 0.05 8.9171 0.05 v -3 h 8.8171 v 3 h 0.05 8.917 0.05 v -3 h 8.8171 v 3 h 0.05 8.917 0.05 v -3 h 8.8171 v 3 h 0.05 8.917 0.05 v -3 h 8.8171 v 3 h 0.05 8.9171 0.05 v -3 h 8.817 v 3 h 0.05 8.9171 0.05 v -3 h 8.817 v 3 h 0.05 8.9171 v 6.42 0.05 h 3 v 6.32 h -3 v 0.05 6.42 0.05 h 3 v 6.32 h -3 v 0.05 6.42 h -8.9171 -0.05 v 3 h -8.817 v -3 h -0.05 -8.9171 -0.05 v 3 h -8.817 v -3 h -0.05 -8.9171 -0.05 v 3 h -8.8171 v -3 h -0.05 -8.917 -0.05 v 3 h -8.8171 v -3 h -0.05 -8.917 -0.05 v 3 h -8.8171 v -3 h -0.05 -8.917 -0.05 v 3 h -8.8171 v -3 h -0.05 -8.9171 -0.05 v 3 h -8.817 v -3 h -0.05 -8.9171 -0.05 v 3 h -8.817 v -3 H 18.9171 10 V 43.68 43.63 H 7 v -6.32 h 3 V 37.26 30.84 30.79 H 7 v -6.32 h 3 v -0.05 z"
          stroke="#000000"
          stroke-width="0.1"
          fill="none"
-         id="pcb_size"
-         style="display:none;stroke:none;stroke-width:0;stroke-dasharray:none;fill:none" />
-      <g
-         id="g9"
-         inkscape:label="screen_mounting_holes"
-         transform="translate(-148.37837,-94.20974)"
-         style="fill:none;stroke:#000000;stroke-opacity:1">
-        <circle
-           style="fill:none;fill-opacity:1;stroke-width:0.264583;stroke:#000000;stroke-opacity:1"
-           id="path9"
-           cx="298"
-           cy="226.39999"
-           r="3.5"
-           inkscape:label="hole_br" />
-        <circle
-           style="fill:none;fill-opacity:1;stroke-width:0.264583;stroke:#000000;stroke-opacity:1"
-           id="path9-5"
-           cx="203.5"
-           cy="226.39999"
-           r="3.5"
-           inkscape:label="hole_bl" />
-        <circle
-           style="fill:none;fill-opacity:1;stroke-width:0.264583;stroke:#000000;stroke-opacity:1"
-           id="path9-1"
-           cx="298"
-           cy="178.5"
-           r="3.5"
-           inkscape:label="hole_tr" />
-        <circle
-           style="fill:none;fill-opacity:1;stroke-width:0.264583;stroke:#000000;stroke-opacity:1"
-           id="path9-11"
-           cx="203.5"
-           cy="178.5"
-           r="3.5"
-           inkscape:label="hole_tl_cutout" />
-      </g>
-      <rect
-         style="fill:none;stroke-width:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none"
-         id="touchscreen_cutout"
-         width="73.440002"
-         height="48.959999"
-         x="-139.09163"
-         y="-132.72026"
-         sodipodi:type="rect"
-         inkscape:label="lcd_aa_cutout"
-         transform="scale(-1)"
-         ry="0" />
-      <circle
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
-         id="path9-11-2"
-         cx="271.65521"
-         cy="222.70729"
-         r="3.5"
-         inkscape:label="hole_tl_cutout" />
+         id="path1"
+         inkscape:label="bottom_path" />
     </g>
-  </g>
-  <g
-     id="g3"
-     inkscape:label="back_panel">
-    <path
-       d="M 182.59 79.1 L 334.18 79.1 L 334.18 79.15 L 337.18 79.15 L 337.18 87.4157 L 334.18 87.4157 L 334.18 87.4657 L 334.18 95.8314 L 334.18 95.8814 L 337.18 95.8814 L 337.18 104.1471 L 334.18 104.1471 L 334.18 104.1971 L 334.18 112.5629 L 334.18 112.6129 L 337.18 112.6129 L 337.18 120.8786 L 334.18 120.8786 L 334.18 120.9286 L 334.18 129.2943 L 334.18 129.3443 L 337.18 129.3443 L 337.18 137.61 L 337.18 137.66 L 337.18 140.66 L 325.2629 140.66 L 325.2129 140.66 L 325.2129 137.66 L 316.3959 137.66 L 316.3959 140.66 L 316.3459 140.66 L 307.4288 140.66 L 307.3788 140.66 L 307.3788 137.66 L 298.5618 137.66 L 298.5618 140.66 L 298.5118 140.66 L 289.5947 140.66 L 289.5447 140.66 L 289.5447 137.66 L 280.7276 137.66 L 280.7276 140.66 L 280.6776 140.66 L 271.7606 140.66 L 271.7106 140.66 L 271.7106 137.66 L 262.8935 137.66 L 262.8935 140.66 L 262.8435 140.66 L 253.9265 140.66 L 253.8765 140.66 L 253.8765 137.66 L 245.0594 137.66 L 245.0594 140.66 L 245.0094 140.66 L 236.0924 140.66 L 236.0424 140.66 L 236.0424 137.66 L 227.2253 137.66 L 227.2253 140.66 L 227.1753 140.66 L 218.2582 140.66 L 218.2082 140.66 L 218.2082 137.66 L 209.3912 137.66 L 209.3912 140.66 L 209.3412 140.66 L 200.4241 140.66 L 200.3741 140.66 L 200.3741 137.66 L 191.5571 137.66 L 191.5571 140.66 L 191.5071 140.66 L 182.59 140.66 L 179.59 140.66 L 179.59 137.66 L 179.59 137.61 L 179.59 129.3443 L 182.59 129.3443 L 182.59 129.2943 L 182.59 120.9286 L 182.59 120.8786 L 179.59 120.8786 L 179.59 112.6129 L 182.59 112.6129 L 182.59 112.5629 L 182.59 104.1971 L 182.59 104.1471 L 179.59 104.1471 L 179.59 95.8814 L 182.59 95.8814 L 182.59 95.8314 L 182.59 87.4657 L 182.59 87.4157 L 179.59 87.4157 L 179.59 79.15 L 182.59 79.15 L 182.59 79.1 Z"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="path3" />
     <g
-       id="g7"
-       inkscape:label="heatsink">
+       id="g2"
+       inkscape:label="front_panel"
+       transform="rotate(180,82.675159,90.440992)">
       <rect
-         x="83.255096"
-         y="-246.55905"
-         width="49.891747"
-         height="59.891747"
+         x="24.33725"
+         y="115.96358"
+         width="12.5"
+         height="19"
          stroke="#000000"
-         stroke-width="0.108254"
+         stroke-width="0.1"
          fill="none"
-         id="rect6-8"
-         inkscape:label="heatsink_full_dimensions"
+         id="rect6-2"
+         inkscape:label="switch_cutout" />
+      <path
+         d="m 10,79.1 h 151.59 v 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3658 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 0.05 3 h -11.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.917 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.917 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.917 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.817 v 3 H 18.9171 10 7 v -3 -0.05 -8.2657 h 3 v -0.05 -8.3657 -0.05 H 7 v -8.2657 h 3 v -0.05 -8.3658 -0.05 H 7 v -8.2657 h 3 v -0.05 -8.3657 -0.05 H 7 V 79.15 h 3 z"
+         stroke="#000000"
+         stroke-width="0.1"
+         fill="none"
+         id="path2"
+         inkscape:label="front_path" />
+      <g
+         id="g10"
+         inkscape:label="screen"
+         style="fill:none">
+        <rect
+           x="51.621632"
+           y="80.490257"
+           width="101.5"
+           height="55.5"
+           stroke="#000000"
+           stroke-width="0.1"
+           fill="none"
+           id="pcb_size"
+           style="display:none;fill:none;stroke:none;stroke-width:0;stroke-dasharray:none" />
+        <g
+           id="g9"
+           inkscape:label="screen_mounting_holes"
+           transform="translate(-148.37837,-94.20974)"
+           style="fill:none;stroke:#000000;stroke-opacity:1">
+          <circle
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             id="path9"
+             cx="298"
+             cy="226.39999"
+             r="3.5"
+             inkscape:label="hole_br" />
+          <circle
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             id="path9-5"
+             cx="203.5"
+             cy="226.39999"
+             r="3.5"
+             inkscape:label="hole_bl" />
+          <circle
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             id="path9-1"
+             cx="298"
+             cy="178.5"
+             r="3.5"
+             inkscape:label="hole_tr" />
+          <circle
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             id="path9-11"
+             cx="203.5"
+             cy="178.5"
+             r="3.5"
+             inkscape:label="hole_tl_cutout" />
+        </g>
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           id="touchscreen_cutout"
+           width="73.440002"
+           height="48.959999"
+           x="-139.09163"
+           y="-132.72026"
+           sodipodi:type="rect"
+           inkscape:label="lcd_aa_cutout"
+           transform="scale(-1)"
+           ry="0" />
+      </g>
+    </g>
+    <g
+       id="g3"
+       inkscape:label="back_panel"
+       transform="translate(-178.82968,60.981975)">
+      <path
+         d="m 182.59,79.1 h 151.59 v 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3658 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 0.05 3 h -11.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.917 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.917 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.917 -0.05 v -3 h -8.8171 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -0.05 v -3 h -8.817 v 3 h -0.05 -8.9171 -3 v -3 -0.05 -8.2657 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 -8.3658 -0.05 h -3 v -8.2657 h 3 v -0.05 -8.3657 -0.05 h -3 V 79.15 h 3 z"
+         stroke="#000000"
+         stroke-width="0.1"
+         fill="none"
+         id="path3"
+         inkscape:label="back_path" />
+      <g
+         id="g7"
+         inkscape:label="heatsink">
+        <rect
+           x="83.255096"
+           y="-246.55905"
+           width="49.891747"
+           height="59.891747"
+           stroke="#000000"
+           stroke-width="0.108254"
+           fill="none"
+           id="rect6-8"
+           inkscape:label="heatsink_full_dimensions"
+           transform="rotate(90)"
+           style="display:none" />
+        <rect
+           style="fill:none;stroke-width:0.998734"
+           id="rect1"
+           width="5"
+           height="54.099998"
+           x="214.11317"
+           y="79.099998"
+           inkscape:label="heatsink_spine_cutout" />
+      </g>
+    </g>
+    <g
+       id="g4"
+       inkscape:label="left_panel"
+       transform="rotate(180,144.55185,169.20917)">
+      <path
+         d="m 98.555482,236.61628 h 32.099998 v 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2658 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 3 h -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.419998 v -3 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2658 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 z"
+         stroke="#000000"
+         stroke-width="0.1"
+         fill="none"
+         id="path4"
+         inkscape:label="left_path" />
+      <rect
+         style="fill:none;stroke-width:1"
+         id="rect7"
+         width="24"
+         height="24"
+         x="255.39629"
+         y="-126.60548"
          transform="rotate(90)"
-         style="display:none" />
-      <rect
-         style="fill:none;stroke-width:0.998734"
-         id="rect1"
-         width="5"
-         height="54.099998"
-         x="214.11317"
-         y="79.099998"
-         inkscape:label="heatsink_spine_cutout" />
+         inkscape:label="oven_plug_cutout" />
     </g>
-  </g>
-  <g
-     id="g4"
-     inkscape:label="left_panel"
-     transform="rotate(-90,29.409829,193.24006)">
-    <path
-       d="m 98.555482,236.61628 h 32.099998 v 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2658 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 3 h -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.419998 v -3 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2658 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 z"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="path4" />
-    <rect
-       style="fill:none;stroke-width:1"
-       id="rect7"
-       width="24"
-       height="24"
-       x="255.39629"
-       y="-126.60548"
-       transform="rotate(90)"
-       inkscape:label="oven_plug_cutout" />
-  </g>
-  <g
-     id="g5"
-     inkscape:label="right_panel">
-    <path
-       d="m 62.968348,163.05328 h 32.1 v 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2658 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 3 h -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.42 v -3 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2658 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 z"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="path5" />
     <g
-       id="g12"
-       inkscape:label="c14_cutout"
-       transform="rotate(90,141.29517,65.559825)">
-      <g
-         id="g11"
-         inkscape:label="c14_mount_cutout"
-         style="fill:none"
-         transform="translate(-70.595108,-53.277282)">
-        <circle
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
-           id="path9-11-6"
-           cx="361.89615"
-           cy="181.11394"
-           inkscape:label="c14_left_mount_cutout"
-           r="2" />
-        <circle
-           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
-           id="path9-11-6-4"
-           cx="313.63156"
-           cy="181.11394"
-           inkscape:label="c14_left_mount_cutout"
-           r="2" />
-      </g>
-      <rect
-         x="251.66875"
-         y="116.33665"
-         width="31"
-         height="23"
+       id="g5"
+       inkscape:label="right_panel"
+       transform="translate(95.534667,-22.953973)">
+      <path
+         d="m 62.968348,163.05328 h 32.1 v 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 0.05 h 3 v 8.2658 h -3 v 0.05 8.3657 0.05 h 3 v 8.2657 h -3 v 0.05 8.3657 3 h -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.42 -0.05 v -3 h -6.32 v 3 h -0.05 -6.42 v -3 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2658 h 3 v -0.05 -8.3657 -0.05 h -3 v -8.2657 h 3 v -0.05 z"
          stroke="#000000"
          stroke-width="0.1"
          fill="none"
-         id="rect6-8-3"
-         inkscape:label="c14_plug_cutout" />
+         id="path5"
+         inkscape:label="right_path" />
+      <g
+         id="g12"
+         inkscape:label="c14_cutout"
+         transform="rotate(90,141.29517,65.559825)">
+        <g
+           id="g11"
+           inkscape:label="c14_mount_cutout"
+           style="fill:none"
+           transform="translate(-70.595108,-53.277282)">
+          <circle
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             id="path9-11-6"
+             cx="361.89615"
+             cy="181.11394"
+             inkscape:label="c14_left_mount_cutout"
+             r="2" />
+          <circle
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             id="path9-11-6-4"
+             cx="313.63156"
+             cy="181.11394"
+             inkscape:label="c14_left_mount_cutout"
+             r="2" />
+        </g>
+        <rect
+           x="251.66875"
+           y="116.33665"
+           width="31"
+           height="23"
+           stroke="#000000"
+           stroke-width="0.1"
+           fill="none"
+           id="rect6-8-3"
+           inkscape:label="c14_plug_cutout" />
+      </g>
     </g>
-  </g>
-  <g
-     id="g6"
-     inkscape:label="top_panel">
-    <rect
-       x="10"
-       y="248.22"
-       width="157.59"
-       height="38.1"
-       stroke="#000000"
-       stroke-width="0.1"
-       fill="none"
-       id="rect6" />
+    <g
+       id="g6"
+       inkscape:label="top_panel"
+       transform="rotate(180,133.78709,173.80879)">
+      <rect
+         x="109.22386"
+         y="207.6356"
+         width="157.59"
+         height="38.099998"
+         stroke="#000000"
+         stroke-width="0.1"
+         fill="none"
+         id="rect6"
+         inkscape:label="top_path" />
+    </g>
   </g>
 </svg>
