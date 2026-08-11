@@ -48,6 +48,17 @@ int RELAY_SIGNAL = 25;
 int RELAY_STATE = LOW;
 MAX6675 thermocouple(SCK, CS, SO);
 
+uint8_t STATE_BOOT = 0;
+uint8_t STATE_HALT = 255;
+
+uint8_t advance_state(uint8_t cur_state) {
+    switch (cur_state) {
+        case STATE_BOOT:
+        case STATE_HALT:
+            loop();
+    }
+}
+
 void relayWrite(int pin, int state) {
     digitalWrite(pin, state);
     Serial.printf("[RELAY] Pin %d set to %d\n", pin, state);
