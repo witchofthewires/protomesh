@@ -14,12 +14,13 @@
  * The display, touch input, and LVGL itself are already initialized by the
  * sketch (see lv_setup.hpp) before ui_init() is called.
  */
-
+#include <cstdlib>
 #include "ui.h"
 
 static lv_obj_t *preheat_label, *soak_label, *reflow_label, *preheat_temp_label, *soak_temp_label, *reflow_temp_label, *preheat_time_label, *soak_time_label, *reflow_time_label;
 static lv_obj_t *confirm_button;
 static lv_obj_t *confirm_text_label;
+static lv_obj_t *boot_label;
 
 // Move the "Hello, world!" label so it's centered on wherever the screen is
 // being touched.  Fires continuously while pressed, so it tracks a drag too.
@@ -63,7 +64,16 @@ void draw_button(lv_obj_t *screen, lv_obj_t *button) {
     lv_obj_remove_flag(button, LV_OBJ_FLAG_CLICKABLE);
 }
 
-void draw_setup_menu(lv_obj_t *screen) {
+void draw_boot_screen(void) {
+    lv_obj_t *screen = lv_screen_active();
+    write_text(screen, boot_label, "KILN: DIY Solder Reflow Oven\nMade with <3 by the Protomesh Collective", 0, 70, LV_ALIGN_TOP_MID);
+}
+
+void draw_setup_menu(void) {
+
+    lv_obj_t *screen = lv_obj_create(NULL);
+    lv_screen_load(screen);
+
     write_text(screen, preheat_label, "preheat", -50, 20, LV_ALIGN_TOP_MID);
     write_text(screen, soak_label, "soak", 0, 20, LV_ALIGN_TOP_MID);
     write_text(screen, reflow_label, "reflow", 50, 20, LV_ALIGN_TOP_MID);
@@ -72,13 +82,6 @@ void draw_setup_menu(lv_obj_t *screen) {
     write_text(screen, reflow_temp_label, "400C", 50, 70, LV_ALIGN_TOP_MID);
     write_text(screen, preheat_time_label, "1m", -50, 120, LV_ALIGN_TOP_MID);
     write_text(screen, soak_time_label, "2m", 0, 120, LV_ALIGN_TOP_MID);
-    write_text(screen, reflow_time_label, "3m", 50, 120, LV_ALIGN_TOP_MID);
-}
-
-void ui_init(void) {
-    // The screen LVGL created for us.  Everything we draw is a child of this.
-    lv_obj_t *screen = lv_screen_active();
-    draw_setup_menu(screen);
     
     confirm_button = lv_obj_create(screen);
     draw_button(screen, confirm_button);
@@ -88,7 +91,13 @@ void ui_init(void) {
     lv_obj_set_style_bg_color(confirm_button, lv_color_hex(0xFF0000), 0);
     lv_obj_center(confirm_text_label);
     lv_label_set_text(confirm_text_label, "CONFIRM");
+}
+
 /*
+void ui_init(void) {
+    // The screen LVGL created for us.  Everything we draw is a child of this.
+    lv_obj_t *screen = lv_screen_active();
+    draw_setup_menu(screen);
 
     lv_display_t *disp = lv_display_get_default();
     lv_coord_t scr_w = lv_display_get_horizontal_resolution(disp);
@@ -109,5 +118,6 @@ void ui_init(void) {
 
     // From here, add your own screens, widgets, and event handlers.
     // See https://docs.lvgl.io/ for the LVGL widget reference.
-    */
+    
 }
+*/

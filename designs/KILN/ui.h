@@ -24,8 +24,10 @@
 extern "C" {
 #endif
 
-// Builds the initial UI.  Called once from the sketch's setup().
-void ui_init(void);
+
+void draw_boot_screen(void);
+void clear_boot_screen(void);
+void draw_setup_menu(void);
 
 #ifdef __cplusplus
 } /*extern "C"*/
