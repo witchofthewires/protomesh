@@ -42,15 +42,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="0.5512434"
-     inkscape:cx="815.42926"
-     inkscape:cy="300.23035"
+     inkscape:zoom="3.1183036"
+     inkscape:cx="593.59198"
+     inkscape:cy="628.06586"
      inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="1076"
+     inkscape:window-height="1121"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g8"
+     inkscape:current-layer="g5"
      showgrid="false">
     <inkscape:grid
        id="grid8"
@@ -236,12 +236,12 @@
       <g
          id="g12"
          inkscape:label="c14_cutout"
-         transform="rotate(90,141.29517,65.559825)">
+         transform="rotate(90,141.36597,67.539029)">
         <g
            id="g11"
            inkscape:label="c14_mount_cutout"
            style="fill:none"
-           transform="translate(-70.595108,-53.277282)">
+           transform="matrix(0.82811131,0,0,0.82811131,-12.045845,-20.095845)">
           <circle
              style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
              id="path9-11-6"
@@ -258,12 +258,12 @@
              r="2" />
         </g>
         <rect
-           x="251.66875"
-           y="116.33665"
-           width="31"
-           height="23"
+           x="254.9113"
+           y="120.42778"
+           width="25.497835"
+           height="18.917749"
            stroke="#000000"
-           stroke-width="0.1"
+           stroke-width="0.0822511"
            fill="none"
            id="rect6-8-3"
            inkscape:label="c14_plug_cutout" />
