@@ -40,6 +40,7 @@
 // It is a hand-written "Hello, world!" screen meant as a starting point.
 // Build your own application by editing ui_init() in ui.cpp.
 #include "ui.h"
+extern uint8_t is_button_pressed;
 
 //int SCK = 18;
 int SO = 19;
@@ -55,7 +56,9 @@ const uint8_t STATE_HALT = 255;
 uint8_t state = STATE_BOOT;
 
 void execute_and_advance_state(void) {
-    Serial.printf("[SYSTEM] State: %d\n", state);
+    Serial.printf("[SYSTEM] State: %d\tButton: %d\n", 
+                  state, 
+                  is_button_pressed);
     delay(500);
     switch (state) {
         case STATE_BOOT:
@@ -97,7 +100,7 @@ void execute_error_state() {
 }
 
 void execute_setup_menu_render_state() {
-    RELAY_STATE ^= HIGH;
+    RELAY_STATE = is_button_pressed;
     relayWrite(RELAY_SIGNAL, RELAY_STATE);
     Serial.printf("[MAX6675] Temperature: %f deg C | %f deg F\n", thermocouple.readCelsius(), thermocouple.readFahrenheit());
 }

@@ -22,21 +22,12 @@ static lv_obj_t *confirm_button;
 static lv_obj_t *confirm_text_label;
 static lv_obj_t *boot_label;
 
-// Move the "Hello, world!" label so it's centered on wherever the screen is
-// being touched.  Fires continuously while pressed, so it tracks a drag too.
-static void follow_touch_cb(lv_event_t *e) {
-    lv_indev_t *indev = lv_indev_active();
-    if (!indev) return;
+uint8_t is_button_pressed = 0;
 
-    lv_point_t p;
-    lv_indev_get_point(indev, &p);
-/*
-    lv_coord_t w = lv_obj_get_width(hello_label);
-    lv_coord_t h = lv_obj_get_height(hello_label);
-    lv_obj_set_pos(hello_label, p.x - w / 2, p.y - h / 2);
-    */
+static void touch_cb(lv_event_t *e) {
+    is_button_pressed ^= 1;
 }
-
+/*
 // Cycle the test rectangle through pure red, green, and blue.
 static void color_cycle_cb(lv_timer_t *t) {
     static const uint32_t colors[3] = { 0xFF0000, 0x00FF00, 0x0000FF };
@@ -47,7 +38,7 @@ static void color_cycle_cb(lv_timer_t *t) {
     lv_label_set_text(confirm_text_label, names[i]);
     i = (i + 1) % 3;
 }
-
+*/
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification) {
     label = lv_label_create(screen);
     lv_label_set_text(label, text);
@@ -59,9 +50,8 @@ void draw_button(lv_obj_t *screen, lv_obj_t *button) {
     lv_obj_align(button, LV_ALIGN_TOP_MID, 0, 170);
     lv_obj_set_style_bg_opa(button, LV_OPA_COVER, 0);
     lv_obj_set_style_border_width(button, 0, 0);
-    lv_obj_remove_flag(button, LV_OBJ_FLAG_SCROLLABLE);
-    // Don't let the rectangle eat touches meant for the "follow" behavior.
-    lv_obj_remove_flag(button, LV_OBJ_FLAG_CLICKABLE);
+    //lv_obj_remove_flag(button, LV_OBJ_FLAG_SCROLLABLE);
+    lv_obj_add_event_cb(button, touch_cb, LV_EVENT_CLICKED, NULL);
 }
 
 void draw_boot_screen(void) {
