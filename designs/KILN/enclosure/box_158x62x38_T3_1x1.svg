@@ -42,15 +42,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showguides="false"
-     inkscape:zoom="0.5512434"
-     inkscape:cx="815.42926"
-     inkscape:cy="300.23035"
+     inkscape:zoom="1"
+     inkscape:cx="593"
+     inkscape:cy="331.5"
      inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="1076"
+     inkscape:window-height="1121"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g8"
+     inkscape:current-layer="g2"
      showgrid="false">
     <inkscape:grid
        id="grid8"
@@ -88,8 +88,8 @@
        inkscape:label="front_panel"
        transform="rotate(180,82.675159,90.440992)">
       <rect
-         x="24.33725"
-         y="115.96358"
+         x="16.664333"
+         y="100.38"
          width="12.5"
          height="19"
          stroke="#000000"
@@ -107,7 +107,8 @@
       <g
          id="g10"
          inkscape:label="screen"
-         style="fill:none">
+         style="fill:none"
+         transform="translate(-0.26458333,-1.3229167)">
         <rect
            x="51.621632"
            y="80.490257"
@@ -121,46 +122,46 @@
         <g
            id="g9"
            inkscape:label="screen_mounting_holes"
-           transform="translate(-148.37837,-94.20974)"
+           transform="translate(-164.95982,-92.574815)"
            style="fill:none;stroke:#000000;stroke-opacity:1">
           <circle
-             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+             style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.283856;stroke-opacity:1"
              id="path9"
              cx="298"
              cy="226.39999"
-             r="3.5"
-             inkscape:label="hole_br" />
+             inkscape:label="hole_br"
+             r="1.75" />
           <circle
              style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
              id="path9-5"
              cx="203.5"
              cy="226.39999"
-             r="3.5"
-             inkscape:label="hole_bl" />
+             inkscape:label="hole_bl"
+             r="1.75" />
           <circle
              style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
              id="path9-1"
              cx="298"
              cy="178.5"
-             r="3.5"
-             inkscape:label="hole_tr" />
+             inkscape:label="hole_tr"
+             r="1.75" />
           <circle
              style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
              id="path9-11"
              cx="203.5"
              cy="178.5"
-             r="3.5"
-             inkscape:label="hole_tl_cutout" />
+             inkscape:label="hole_tl_cutout"
+             r="1.75" />
         </g>
         <rect
-           style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.114662;stroke-dasharray:none;stroke-opacity:1"
            id="touchscreen_cutout"
-           width="73.440002"
-           height="48.959999"
-           x="-139.09163"
-           y="-132.72026"
+           width="85.045334"
+           height="55.585339"
+           x="-128.31767"
+           y="-137.67267"
            sodipodi:type="rect"
-           inkscape:label="lcd_aa_cutout"
+           inkscape:label="lcd_bl_cutout"
            transform="scale(-1)"
            ry="0" />
       </g>
@@ -213,7 +214,7 @@
          id="path4"
          inkscape:label="left_path" />
       <rect
-         style="fill:none;stroke-width:1"
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
          id="rect7"
          width="24"
          height="24"
@@ -236,12 +237,12 @@
       <g
          id="g12"
          inkscape:label="c14_cutout"
-         transform="rotate(90,141.29517,65.559825)">
+         transform="rotate(90,141.36597,67.539029)">
         <g
            id="g11"
            inkscape:label="c14_mount_cutout"
            style="fill:none"
-           transform="translate(-70.595108,-53.277282)">
+           transform="matrix(0.82811131,0,0,0.82811131,-12.045845,-20.095845)">
           <circle
              style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
              id="path9-11-6"
@@ -258,12 +259,12 @@
              r="2" />
         </g>
         <rect
-           x="251.66875"
-           y="116.33665"
-           width="31"
-           height="23"
+           x="254.9113"
+           y="120.42778"
+           width="25.497835"
+           height="18.917749"
            stroke="#000000"
-           stroke-width="0.1"
+           stroke-width="0.0822511"
            fill="none"
            id="rect6-8-3"
            inkscape:label="c14_plug_cutout" />

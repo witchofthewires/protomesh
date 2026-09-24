@@ -1,5 +1,7 @@
 # KILN
 
+![Photograph of the KILN Solder Reflow Oven](/static/KILN_v0.1.1-alpha.jpg?raw=true "KILN Solder Reflow Oven")
+
 ## Wiring
 1. plug a standard JST cable into the I2C jack such that the red wire connects to IO25 and the black wire connects to GND.
 2. plug that across series circuit: VCC, LED, 2kOhm resistor, GND.3.5" LCD Display, ESP32-32E 320x480, Resistance Touch.
