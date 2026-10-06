@@ -21,12 +21,27 @@ relay 57.3x44.5x22.6
 38.1 - (22.6 + 5.8) = 9.7
 
 157.59 - (101.5 + 44.5) = 11.59
+
 ## Dev
-Use the Arduino IDE
+
 ### Board Configuration
 This code was tested on the following boards:
-- Yellow silkscreen "3.5" LCD Display, ESP32-32E 320x480, Resistance Touch." using board 'esp32' by Espressif Systems (tested on 3.0.3)
+- Yellow silkscreen "3.5" LCD Display, ESP32-32E 320x480, Resistance Touch." 
 
-### Required Arduino libraries 
+### Install
+Use the Arduino IDE. Install the following libraries:
 - lvgl by kisvegabor (tested on 9.3.0)
 - MAX6675 library by Adafruit (tested on 1.1.2)
+Install the following board:
+- 'esp32' by Espressif Systems (tested on 3.0.3)
+
+#### Linux
+(TODO - rework project to remove this step) Execute the following to provide LVGL with a conf file:
+` cp lv_conf.h ARDUINO_DIR/libraries/ ` 
+
+where ARDUINO_DIR is the Arduino install directory (home/$USER/Arduino on most systems)
+
+Also need to install https://github.com/chipguyhere/ESP32-32E_4inch_display.
+
+#### Windows
+TODO DOCUMENT
