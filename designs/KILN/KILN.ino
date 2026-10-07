@@ -41,6 +41,7 @@
 // Build your own application by editing ui_init() in ui.cpp.
 #include "ui.h"
 extern uint8_t is_button_pressed;
+extern uint16_t preheat_time, preheat_temp, soak_time, soak_temp, reflow_time, reflow_temp; 
 
 //int SCK = 18;
 int SO = 19;

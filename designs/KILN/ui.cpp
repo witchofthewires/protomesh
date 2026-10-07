@@ -17,20 +17,26 @@
 #include <cstdlib>
 #include "ui.h"
 
-static lv_obj_t *preheat_label, *soak_label, *reflow_label;
+static lv_obj_t *preheat_label, *soak_label, *reflow_label, *time_label, *temp_label;
 static lv_obj_t *preheat_temp_input, *preheat_time_input, *soak_temp_input, *soak_time_input, *reflow_temp_input, *reflow_time_input;
 static lv_obj_t *confirm_button;
 static lv_obj_t *confirm_text_label;
 static lv_obj_t *boot_label;
 
 uint8_t is_button_pressed = 0;
+uint16_t preheat_time = 300;
+uint16_t preheat_temp = 300;
+uint16_t soak_time = 300;
+uint16_t soak_temp = 300;
+uint16_t reflow_time = 300;
+uint16_t reflow_temp = 300;
 
 static void touch_cb(lv_event_t *e);
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification);
 void draw_button(lv_obj_t *screen, lv_obj_t *button);
 static void lv_spinbox_increment_event_cb(lv_event_t *e);
 static void lv_spinbox_decrement_event_cb(lv_event_t *e);
-void spinbox_example();
+void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits, uint8_t num_dec_points, uint16_t width, uint16_t x, uint16_t y);
 void draw_boot_screen();
 void draw_setup_menu(); 
 
@@ -57,7 +63,7 @@ void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_
 
 void draw_button(lv_obj_t *screen, lv_obj_t *button) {
     lv_obj_set_size(button, 200, 90);
-    lv_obj_align(button, LV_ALIGN_TOP_MID, 0, 170);
+    lv_obj_align(button, LV_ALIGN_TOP_MID, 0, 220);
     lv_obj_set_style_bg_opa(button, LV_OPA_COVER, 0);
     lv_obj_set_style_border_width(button, 0, 0);
     //lv_obj_remove_flag(button, LV_OBJ_FLAG_SCROLLABLE);
@@ -91,7 +97,7 @@ static void lv_spinbox_decrement_event_cb(lv_event_t *e) {
  * `LV_EVENT_ALL` handlers call `lv_spinbox_increment` or `lv_spinbox_decrement`
  * on `LV_EVENT_SHORT_CLICKED` and `LV_EVENT_LONG_PRESSED_REPEAT`.
  */
-void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits, uint8_t num_dec_points, uint8_t width, uint8_t x, uint8_t y)
+void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits, uint8_t num_dec_points, uint16_t width, uint16_t x, uint16_t y)
 {
     spinbox = lv_spinbox_create(lv_screen_active());
     lv_spinbox_set_range(spinbox, min, max);
@@ -101,9 +107,9 @@ void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits,
     lv_spinbox_step_prev(spinbox);
     lv_obj_set_width(spinbox, width);
     lv_obj_center(spinbox);
-    lv_obj_align(spinbox, LV_ALIGN_TOP_MID, x, y);
+    lv_obj_align(spinbox, LV_ALIGN_TOP_LEFT, x, y);
 
-    uint8_t h = lv_obj_get_height(spinbox);
+    uint16_t h = lv_obj_get_height(spinbox);
 
     lv_obj_t * btn = lv_button_create(lv_screen_active());
     lv_obj_set_size(btn, h, h);
@@ -128,17 +134,19 @@ void draw_setup_menu(void) {
     lv_obj_t *screen = lv_obj_create(NULL);
     lv_screen_load(screen);
 
-    write_text(screen, preheat_label, "preheat", -50, 20, LV_ALIGN_TOP_MID);
-    write_text(screen, soak_label, "soak", 0, 20, LV_ALIGN_TOP_MID);
-    write_text(screen, reflow_label, "reflow", 50, 20, LV_ALIGN_TOP_MID);
+    write_text(screen, preheat_label, "preheat", -200, 70, LV_ALIGN_TOP_MID);
+    write_text(screen, soak_label, "soak", -200, 120, LV_ALIGN_TOP_MID);
+    write_text(screen, reflow_label, "reflow", -200, 170, LV_ALIGN_TOP_MID);
 
-    create_spinbox(preheat_temp_input, 0, 500, 3, 0, 50, -50, 70);
-    create_spinbox(soak_temp_input, 0, 500, 3, 0, 50, 0, 70);
-    create_spinbox(reflow_temp_input, 0, 500, 3, 0, 50, 50, 70);
+    write_text(screen, temp_label, "temp (degF)", -60, 20, LV_ALIGN_TOP_MID);
+    create_spinbox(preheat_temp_input, 0, 500, 3, 0, 50, 150, 70);
+    create_spinbox(soak_temp_input, 0, 500, 3, 0, 50, 150, 120);
+    create_spinbox(reflow_temp_input, 0, 500, 3, 0, 50, 150, 170);
 
-    create_spinbox(preheat_temp_input, 0, 10, 1, 0, 50, -50, 120);
-    create_spinbox(soak_temp_input, 0, 10, 1, 0, 50, 0, 120);
-    create_spinbox(reflow_temp_input, 0, 10, 1, 0, 50, 50, 120);
+    write_text(screen, time_label, "time (min)", 120, 20, LV_ALIGN_TOP_MID);
+    create_spinbox(preheat_time_input, 0, 10, 1, 0, 50, 350, 70);
+    create_spinbox(soak_time_input, 0, 10, 1, 0, 50, 350, 120);
+    create_spinbox(reflow_time_input, 0, 10, 1, 0, 50, 350, 170);
     //write_text(screen, preheat_temp_label, "300C", -50, 70, LV_ALIGN_TOP_MID);
     //write_text(screen, soak_temp_label, "350C", 0, 70, LV_ALIGN_TOP_MID);
     //write_text(screen, reflow_temp_label, "400C", 50, 70, LV_ALIGN_TOP_MID);
@@ -153,6 +161,15 @@ void draw_setup_menu(void) {
     lv_obj_set_style_bg_color(confirm_button, lv_color_hex(0xFF0000), 0);
     lv_obj_center(confirm_text_label);
     lv_label_set_text(confirm_text_label, "CONFIRM");
+}
+
+void read_spinboxes(void) {
+    preheat_time = lv_spinbox_get_value(preheat_time_input);
+    preheat_temp = lv_spinbox_get_value(preheat_temp_input);
+    soak_time = lv_spinbox_get_value(soak_time_input);
+    soak_temp = lv_spinbox_get_value(soak_temp_input);
+    reflow_time = lv_spinbox_get_value(reflow_time_input);
+    reflow_temp = lv_spinbox_get_value(reflow_temp_input);
 }
 
 /*
