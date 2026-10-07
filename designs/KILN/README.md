@@ -34,14 +34,13 @@ Use the Arduino IDE. Install the following libraries:
 - MAX6675 library by Adafruit (tested on 1.1.2)
 Install the following board:
 - 'esp32' by Espressif Systems (tested on 3.0.3)
+Install https://github.com/chipguyhere/ESP32-32E_4inch_display
 
 #### Linux
 (TODO - rework project to remove this step) Execute the following to provide LVGL with a conf file:
 ` cp lv_conf.h ARDUINO_DIR/libraries/ ` 
 
 where ARDUINO_DIR is the Arduino install directory (home/$USER/Arduino on most systems)
-
-Also need to install https://github.com/chipguyhere/ESP32-32E_4inch_display.
 
 #### Windows
 TODO DOCUMENT
