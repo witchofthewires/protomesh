@@ -1,15 +1,5 @@
 /*
- * ui.cpp - Application UI for the LvglClaudeCodeStub example.
- *
- * A clean starting point for building an LVGL application on the ESP32-32E 4" LCD
- * (320x480 portrait resistive touchscreen).  Replace the body of ui_init()
- * with your own widgets.
- *
- * This stub doubles as a bring-up test:
- *   - "Hello, world!" follows your finger, centered on the touch point, so you
- *     can confirm touch coordinates line up with the display.
- *   - A rectangle cycles RED -> GREEN -> BLUE once per second so you can verify
- *     the panel's color order (BGR vs RGB) and inversion are correct.
+ * ui.cpp - Application UI
  *
  * The display, touch input, and LVGL itself are already initialized by the
  * sketch (see lv_setup.hpp) before ui_init() is called.
@@ -43,18 +33,7 @@ void draw_setup_menu();
 static void touch_cb(lv_event_t *e) {
     is_button_pressed ^= 1;
 }
-/*
-// Cycle the test rectangle through pure red, green, and blue.
-static void color_cycle_cb(lv_timer_t *t) {
-    static const uint32_t colors[3] = { 0xFF0000, 0x00FF00, 0x0000FF };
-    static const char    *names[3]  = { "RED", "GREEN", "BLUE" };
-    static int i = 0;
 
-    lv_obj_set_style_bg_color(confirm_button, lv_color_hex(colors[i]), 0);
-    lv_label_set_text(confirm_text_label, names[i]);
-    i = (i + 1) % 3;
-}
-*/
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification) {
     label = lv_label_create(screen);
     lv_label_set_text(label, text);
@@ -101,8 +80,6 @@ void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits,
 {
     spinbox = lv_spinbox_create(lv_screen_active());
     lv_spinbox_set_range(spinbox, min, max);
-    //lv_spinbox_set_digit_count(spinbox, num_digits);
-    //lv_spinbox_set_dec_point_pos(spinbox, num_dec_points);
     lv_spinbox_set_digit_format(spinbox, num_digits, num_digits - num_dec_points);
     lv_spinbox_step_prev(spinbox);
     lv_obj_set_width(spinbox, width);
@@ -147,15 +124,9 @@ void draw_setup_menu(void) {
     create_spinbox(preheat_time_input, 0, 10, 1, 0, 50, 350, 70);
     create_spinbox(soak_time_input, 0, 10, 1, 0, 50, 350, 120);
     create_spinbox(reflow_time_input, 0, 10, 1, 0, 50, 350, 170);
-    //write_text(screen, preheat_temp_label, "300C", -50, 70, LV_ALIGN_TOP_MID);
-    //write_text(screen, soak_temp_label, "350C", 0, 70, LV_ALIGN_TOP_MID);
-    //write_text(screen, reflow_temp_label, "400C", 50, 70, LV_ALIGN_TOP_MID);
-    //write_text(screen, preheat_time_label, "1m", -50, 120, LV_ALIGN_TOP_MID);
-    //write_text(screen, soak_time_label, "2m", 0, 120, LV_ALIGN_TOP_MID);
-    
+
     confirm_button = lv_obj_create(screen);
     draw_button(screen, confirm_button);
-
     confirm_text_label = lv_label_create(confirm_button);
     lv_obj_set_style_text_color(confirm_text_label, lv_color_white(), 0);    
     lv_obj_set_style_bg_color(confirm_button, lv_color_hex(0xFF0000), 0);
@@ -171,32 +142,3 @@ void read_spinboxes(void) {
     reflow_time = lv_spinbox_get_value(reflow_time_input);
     reflow_temp = lv_spinbox_get_value(reflow_temp_input);
 }
-
-/*
-void ui_init(void) {
-    // The screen LVGL created for us.  Everything we draw is a child of this.
-    lv_obj_t *screen = lv_screen_active();
-    draw_setup_menu(screen);
-
-    lv_display_t *disp = lv_display_get_default();
-    lv_coord_t scr_w = lv_display_get_horizontal_resolution(disp);
-    lv_coord_t scr_h = lv_display_get_vertical_resolution(disp);
-    lv_obj_set_pos(hello_label,
-                   (scr_w - lv_obj_get_width(hello_label))  / 2,
-                   (scr_h - lv_obj_get_height(hello_label)) / 2);
-
-    // Track touches on the whole screen.  The screen must be clickable to
-    // receive press events from the touch indev; disable scrolling so dragging
-    // a finger doesn't rubber-band/scroll the screen contents.
-    lv_obj_remove_flag(screen, LV_OBJ_FLAG_SCROLLABLE);
-    lv_obj_add_flag(screen, LV_OBJ_FLAG_CLICKABLE);
-    lv_obj_add_event_cb(screen, follow_touch_cb, LV_EVENT_PRESSING, NULL);
-
-    // Run the color cycle once per second.
-    lv_timer_create(color_cycle_cb, 1000, NULL);
-
-    // From here, add your own screens, widgets, and event handlers.
-    // See https://docs.lvgl.io/ for the LVGL widget reference.
-    
-}
-*/
