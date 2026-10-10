@@ -9,6 +9,7 @@ The Protomesh Collective is an antiprofit formation that builds low-cost Meshtas
 * [KILN](./designs/KILN) - A DIY solder reflow oven with touchscreen interface and Wifi/Bluetooth connectivity, and associated firmware.
   
 ## Join the Collective!
+General body meetings of the Protomesh Collective are held from 6-8 PM on the third Thursday of the month at Prototype x Oakland; pre-registration via [Eventbrite](https://www.eventbrite.com/e/the-protomesh-collective-general-meeting-x-oakland-tickets-2002912801105) is encouraged but not required.
 
 ## Acknowledgments
 The Protomesh Collective would like to thank:
