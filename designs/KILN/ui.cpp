@@ -1,15 +1,5 @@
 /*
- * ui.cpp - Application UI for the LvglClaudeCodeStub example.
- *
- * A clean starting point for building an LVGL application on the ESP32-32E 4" LCD
- * (320x480 portrait resistive touchscreen).  Replace the body of ui_init()
- * with your own widgets.
- *
- * This stub doubles as a bring-up test:
- *   - "Hello, world!" follows your finger, centered on the touch point, so you
- *     can confirm touch coordinates line up with the display.
- *   - A rectangle cycles RED -> GREEN -> BLUE once per second so you can verify
- *     the panel's color order (BGR vs RGB) and inversion are correct.
+ * ui.cpp - Application UI
  *
  * The display, touch input, and LVGL itself are already initialized by the
  * sketch (see lv_setup.hpp) before ui_init() is called.
@@ -24,37 +14,27 @@ static lv_obj_t *confirm_text_label;
 static lv_obj_t *boot_label;
 
 uint8_t is_button_pressed = 0;
-uint16_t preheat_time = 300;
-uint16_t preheat_temp = 300;
-uint16_t soak_time = 300;
-uint16_t soak_temp = 300;
-uint16_t reflow_time = 300;
-uint16_t reflow_temp = 300;
+int32_t preheat_time = 120;
+int32_t preheat_temp = 140; // C
+int32_t soak_time = 60;
+int32_t soak_temp = 170; // C
+int32_t reflow_time = 90;
+int32_t reflow_temp = 220; // C
 
 static void touch_cb(lv_event_t *e);
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification);
 void draw_button(lv_obj_t *screen, lv_obj_t *button);
 static void lv_spinbox_increment_event_cb(lv_event_t *e);
 static void lv_spinbox_decrement_event_cb(lv_event_t *e);
-void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits, uint8_t num_dec_points, uint16_t width, uint16_t x, uint16_t y);
+void create_spinbox(lv_obj_t *spinbox, int32_t value, float min, float max, uint8_t num_digits, uint8_t num_dec_points, int32_t width, int32_t x, int32_t y);
+void read_spinboxes();
 void draw_boot_screen();
 void draw_setup_menu(); 
 
 static void touch_cb(lv_event_t *e) {
     is_button_pressed ^= 1;
 }
-/*
-// Cycle the test rectangle through pure red, green, and blue.
-static void color_cycle_cb(lv_timer_t *t) {
-    static const uint32_t colors[3] = { 0xFF0000, 0x00FF00, 0x0000FF };
-    static const char    *names[3]  = { "RED", "GREEN", "BLUE" };
-    static int i = 0;
 
-    lv_obj_set_style_bg_color(confirm_button, lv_color_hex(colors[i]), 0);
-    lv_label_set_text(confirm_text_label, names[i]);
-    i = (i + 1) % 3;
-}
-*/
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification) {
     label = lv_label_create(screen);
     lv_label_set_text(label, text);
@@ -97,19 +77,18 @@ static void lv_spinbox_decrement_event_cb(lv_event_t *e) {
  * `LV_EVENT_ALL` handlers call `lv_spinbox_increment` or `lv_spinbox_decrement`
  * on `LV_EVENT_SHORT_CLICKED` and `LV_EVENT_LONG_PRESSED_REPEAT`.
  */
-void create_spinbox(lv_obj_t *spinbox, float min, float max, uint8_t num_digits, uint8_t num_dec_points, uint16_t width, uint16_t x, uint16_t y)
+void create_spinbox(lv_obj_t *spinbox, int32_t value, float min, float max, uint8_t num_digits, uint8_t num_dec_points, int32_t width, int32_t x, int32_t y)
 {
     spinbox = lv_spinbox_create(lv_screen_active());
+    lv_spinbox_set_value(spinbox, value);
     lv_spinbox_set_range(spinbox, min, max);
-    //lv_spinbox_set_digit_count(spinbox, num_digits);
-    //lv_spinbox_set_dec_point_pos(spinbox, num_dec_points);
     lv_spinbox_set_digit_format(spinbox, num_digits, num_digits - num_dec_points);
     lv_spinbox_step_prev(spinbox);
     lv_obj_set_width(spinbox, width);
     lv_obj_center(spinbox);
     lv_obj_align(spinbox, LV_ALIGN_TOP_LEFT, x, y);
 
-    uint16_t h = lv_obj_get_height(spinbox);
+    int32_t h = lv_obj_get_height(spinbox);
 
     lv_obj_t * btn = lv_button_create(lv_screen_active());
     lv_obj_set_size(btn, h, h);
@@ -138,65 +117,30 @@ void draw_setup_menu(void) {
     write_text(screen, soak_label, "soak", -200, 120, LV_ALIGN_TOP_MID);
     write_text(screen, reflow_label, "reflow", -200, 170, LV_ALIGN_TOP_MID);
 
-    write_text(screen, temp_label, "temp (degF)", -60, 20, LV_ALIGN_TOP_MID);
-    create_spinbox(preheat_temp_input, 0, 500, 3, 0, 50, 150, 70);
-    create_spinbox(soak_temp_input, 0, 500, 3, 0, 50, 150, 120);
-    create_spinbox(reflow_temp_input, 0, 500, 3, 0, 50, 150, 170);
+    write_text(screen, temp_label, "temp (degC)", -60, 20, LV_ALIGN_TOP_MID);
+    create_spinbox(preheat_temp_input, preheat_temp, 0, 300, 3, 0, 50, 150, 70);
+    create_spinbox(soak_temp_input, soak_temp, 0, 300, 3, 0, 50, 150, 120);
+    create_spinbox(reflow_temp_input, reflow_temp, 0, 300, 3, 0, 50, 150, 170);
 
-    write_text(screen, time_label, "time (min)", 120, 20, LV_ALIGN_TOP_MID);
-    create_spinbox(preheat_time_input, 0, 10, 1, 0, 50, 350, 70);
-    create_spinbox(soak_time_input, 0, 10, 1, 0, 50, 350, 120);
-    create_spinbox(reflow_time_input, 0, 10, 1, 0, 50, 350, 170);
-    //write_text(screen, preheat_temp_label, "300C", -50, 70, LV_ALIGN_TOP_MID);
-    //write_text(screen, soak_temp_label, "350C", 0, 70, LV_ALIGN_TOP_MID);
-    //write_text(screen, reflow_temp_label, "400C", 50, 70, LV_ALIGN_TOP_MID);
-    //write_text(screen, preheat_time_label, "1m", -50, 120, LV_ALIGN_TOP_MID);
-    //write_text(screen, soak_time_label, "2m", 0, 120, LV_ALIGN_TOP_MID);
-    
+    write_text(screen, time_label, "time (s)", 120, 20, LV_ALIGN_TOP_MID);
+    create_spinbox(preheat_time_input, preheat_time, 0, 600, 3, 0, 50, 350, 70);
+    create_spinbox(soak_time_input, soak_time, 0, 600, 3, 0, 50, 350, 120);
+    create_spinbox(reflow_time_input, reflow_time, 0, 600, 3, 0, 50, 350, 170);
+
     confirm_button = lv_obj_create(screen);
     draw_button(screen, confirm_button);
-
     confirm_text_label = lv_label_create(confirm_button);
     lv_obj_set_style_text_color(confirm_text_label, lv_color_white(), 0);    
     lv_obj_set_style_bg_color(confirm_button, lv_color_hex(0xFF0000), 0);
     lv_obj_center(confirm_text_label);
-    lv_label_set_text(confirm_text_label, "CONFIRM");
+    lv_label_set_text(confirm_text_label, "FIRE");
 }
 
 void read_spinboxes(void) {
     preheat_time = lv_spinbox_get_value(preheat_time_input);
-    preheat_temp = lv_spinbox_get_value(preheat_temp_input);
-    soak_time = lv_spinbox_get_value(soak_time_input);
-    soak_temp = lv_spinbox_get_value(soak_temp_input);
-    reflow_time = lv_spinbox_get_value(reflow_time_input);
-    reflow_temp = lv_spinbox_get_value(reflow_temp_input);
+    //preheat_temp = lv_spinbox_get_value(preheat_temp_input);
+    //soak_time = lv_spinbox_get_value(soak_time_input);
+    //soak_temp = lv_spinbox_get_value(soak_temp_input);
+    //reflow_time = lv_spinbox_get_value(reflow_time_input);
+    //reflow_temp = lv_spinbox_get_value(reflow_temp_input);
 }
-
-/*
-void ui_init(void) {
-    // The screen LVGL created for us.  Everything we draw is a child of this.
-    lv_obj_t *screen = lv_screen_active();
-    draw_setup_menu(screen);
-
-    lv_display_t *disp = lv_display_get_default();
-    lv_coord_t scr_w = lv_display_get_horizontal_resolution(disp);
-    lv_coord_t scr_h = lv_display_get_vertical_resolution(disp);
-    lv_obj_set_pos(hello_label,
-                   (scr_w - lv_obj_get_width(hello_label))  / 2,
-                   (scr_h - lv_obj_get_height(hello_label)) / 2);
-
-    // Track touches on the whole screen.  The screen must be clickable to
-    // receive press events from the touch indev; disable scrolling so dragging
-    // a finger doesn't rubber-band/scroll the screen contents.
-    lv_obj_remove_flag(screen, LV_OBJ_FLAG_SCROLLABLE);
-    lv_obj_add_flag(screen, LV_OBJ_FLAG_CLICKABLE);
-    lv_obj_add_event_cb(screen, follow_touch_cb, LV_EVENT_PRESSING, NULL);
-
-    // Run the color cycle once per second.
-    lv_timer_create(color_cycle_cb, 1000, NULL);
-
-    // From here, add your own screens, widgets, and event handlers.
-    // See https://docs.lvgl.io/ for the LVGL widget reference.
-    
-}
-*/

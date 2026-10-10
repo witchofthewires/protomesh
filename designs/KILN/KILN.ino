@@ -41,7 +41,7 @@
 // Build your own application by editing ui_init() in ui.cpp.
 #include "ui.h"
 extern uint8_t is_button_pressed;
-extern uint16_t preheat_time, preheat_temp, soak_time, soak_temp, reflow_time, reflow_temp; 
+extern int32_t preheat_time, preheat_temp, soak_time, soak_temp, reflow_time, reflow_temp; 
 
 //int SCK = 18;
 int SO = 19;
@@ -53,6 +53,7 @@ MAX6675 thermocouple(SCK, CS, SO);
 const uint8_t STATE_BOOT = 0;
 const uint8_t STATE_SETUP_MENU_BUILD = 1;
 const uint8_t STATE_SETUP_MENU_RENDER = 2;
+const uint8_t STATE_FIRE = 3;
 const uint8_t STATE_HALT = 255;
 uint8_t state = STATE_BOOT;
 
@@ -73,6 +74,13 @@ void execute_and_advance_state(void) {
             break;
         case STATE_SETUP_MENU_RENDER:
             execute_setup_menu_render_state();
+            if (is_button_pressed) {state = STATE_FIRE; is_button_pressed=0;}
+            break;
+        case STATE_FIRE:
+            read_spinboxes();
+            Serial.printf("[FIRE] Preheat %dC for %dm; soak %dC for %dm; reflow %dC for %dm\n", 
+                          preheat_temp, preheat_time, soak_temp, soak_time, reflow_temp, reflow_time);
+            state = STATE_SETUP_MENU_RENDER;
             break;
         case STATE_HALT:
             execute_halt_state();
@@ -101,8 +109,6 @@ void execute_error_state() {
 }
 
 void execute_setup_menu_render_state() {
-    RELAY_STATE = is_button_pressed;
-    relayWrite(RELAY_SIGNAL, RELAY_STATE);
     Serial.printf("[MAX6675] Temperature: %f deg C | %f deg F\n", thermocouple.readCelsius(), thermocouple.readFahrenheit());
 }
 
