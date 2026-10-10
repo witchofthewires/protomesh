@@ -13,3 +13,13 @@ The NOMAD is constructed from the following components (all prices from October 
 
 ## Software
 Any working nodes distributed by the Protomesh Collective (after having been assembled, flashed, and configured by community volunteers) utilize the latest stable beta version of the Meshtastic client software (2.7.26 as of 2026 Oct 10) configured to operate in the US region (over 915 MHz).
+
+## Version History
+### Stable Beta Release
+- 1.1.2: Updated case design to physically clip shut
+- 1.1.1: Replaced adhesive-joined battery pack design (held together by pressure from case in v1.0.0 which v1.0.0 case is incapable of providing) with spot-welded battery packs
+- 1.1.0: Upgraded board from Heltec ESP-32V3, requiring new case design
+- 1.0.0: Initial working build
+
+### Unstable Alpha Research
+ - 1.2.0-ALPHA: Replaces GT-800 antenna with RP-SMA connector with DIY Steven's Stinger Gen2 antenna
