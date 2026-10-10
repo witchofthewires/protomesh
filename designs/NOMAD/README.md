@@ -1,3 +1,3 @@
 # NOMAD
 
-<img src="/static/NOMAD.png" alt="Photograph of a NOMAD handheld node" width="894" />
+![Photograph of a NOMAD handheld node](/static/NOMAD_small.png "NOMAD")
