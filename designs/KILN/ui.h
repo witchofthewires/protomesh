@@ -26,7 +26,6 @@ extern "C" {
 
 void read_spinboxes(void);
 void draw_boot_screen(void);
-void clear_boot_screen(void);
 void draw_setup_menu(void);
 
 #ifdef __cplusplus
