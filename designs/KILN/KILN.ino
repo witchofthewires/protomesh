@@ -31,10 +31,8 @@
 
 // Fonts
 // The Montserrat font is built into LVGL in multiple sizes, each size takes up memory.
-// We enable the 14 point font as a default font.
 #define LV_FONT_MONTSERRAT_14 1
-// need other sizes?  You'll know if you see compiler errors after trying to
-// use them.  Just edit lv_conf.h where FONTs are turned off (0) and turn them on (1)
+#define LV_FONT_MONTSERRAT_40 1
 
 // The UI for this example lives in ui.h / ui.cpp in this sketch folder.
 // It is a hand-written "Hello, world!" screen meant as a starting point.

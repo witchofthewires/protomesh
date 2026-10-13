@@ -8,7 +8,7 @@
 #include "ui.h"
 
 static lv_obj_t *preheat_label, *soak_label, *reflow_label, *time_label, *temp_label;
-static lv_obj_t *preheat_temp_input, *preheat_time_input, *soak_temp_input, *soak_time_input, *reflow_temp_input, *reflow_time_input;
+lv_obj_t *preheat_temp_input, *preheat_time_input, *soak_temp_input, *soak_time_input, *reflow_temp_input, *reflow_time_input;
 static lv_obj_t *confirm_button;
 static lv_obj_t *confirm_text_label;
 static lv_obj_t *boot_label;
@@ -129,16 +129,18 @@ void draw_setup_menu(void) {
 
     confirm_button = lv_obj_create(screen);
     draw_button(screen, confirm_button);
+    
     confirm_text_label = lv_label_create(confirm_button);
     lv_obj_set_style_text_color(confirm_text_label, lv_color_white(), 0);    
+    lv_obj_set_style_text_font(confirm_text_label, &lv_font_montserrat_40, 0);
     lv_obj_set_style_bg_color(confirm_button, lv_color_hex(0xFF0000), 0);
     lv_obj_center(confirm_text_label);
     lv_label_set_text(confirm_text_label, "FIRE");
 }
 
 void read_spinboxes(void) {
-    preheat_time = lv_spinbox_get_value(preheat_time_input);
-    //preheat_temp = lv_spinbox_get_value(preheat_temp_input);
+    //preheat_time = &preheat_time_input->value;
+    preheat_temp = lv_spinbox_get_value(preheat_temp_input);
     //soak_time = lv_spinbox_get_value(soak_time_input);
     //soak_temp = lv_spinbox_get_value(soak_temp_input);
     //reflow_time = lv_spinbox_get_value(reflow_time_input);
