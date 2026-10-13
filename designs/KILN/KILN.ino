@@ -53,11 +53,15 @@ double pid_in, pid_out, pid_sp;
 double Kp=2, Ki=5, Kd=1;
 PID myPID(&pid_in, &pid_out, &pid_sp, Kp, Ki, Kd, DIRECT);
 /********************************************** */
+unsigned long time_since_reflow_started;
+unsigned long time_temp_check = 1000;
+unsigned long last_time_temp_check = 0;
+bool preheating = false, soaking = false, reflowing = false, cooling = false, baking = false, new_state = false;
 
 //int SCK = 18;
 int SO = 19;
 int CS = 21; 
-int RELAY_SIGNAL = 25;
+int RELAY_PIN = 25;
 int RELAY_STATE = LOW;
 MAX6675 thermocouple(SCK, CS, SO);
 
@@ -65,6 +69,7 @@ const uint8_t STATE_BOOT = 0;
 const uint8_t STATE_SETUP_MENU_BUILD = 1;
 const uint8_t STATE_SETUP_MENU_RENDER = 2;
 const uint8_t STATE_FIRE = 3;
+const uint8_t STATE_BAKE = 100;
 const uint8_t STATE_HALT = 255;
 uint8_t state = STATE_BOOT;
 
@@ -89,8 +94,12 @@ void execute_and_advance_state(void) {
             break;
         case STATE_FIRE:
             read_spinboxes();
-            Serial.printf("[FIRE] Preheat %dC for %dm; soak %dC for %dm; reflow %dC for %dm\n", 
-                          preheat_temp, preheat_time, soak_temp, soak_time, reflow_temp, reflow_time);
+            Serial.printf("[FIRE] Preheat %dC for %ds; soak %dC for %ds; reflow %dC for %ds\n", 
+                          preheat_temp, preheat_time / 1000, soak_temp, soak_time / 1000 , reflow_temp, reflow_time / 1000);
+            state = STATE_BAKE;
+            break;
+        case STATE_BAKE:
+            bake();
             state = STATE_SETUP_MENU_RENDER;
             break;
         case STATE_HALT:
@@ -149,9 +158,9 @@ void setup() {
     myPID.SetMode(AUTOMATIC); // turn the PID on
     Serial.printf("[PID] Initialized cybernetic control loop (Kp=%.3f, Ki=%.3f, Kd=%.3f)\n", Kp, Ki, Kd);
 
-    pinMode(RELAY_SIGNAL, OUTPUT);
-    relayWrite(RELAY_SIGNAL, RELAY_STATE);
-    Serial.printf("[PID] Initialized solid-state relay (pin %d) to %d\n", RELAY_SIGNAL, RELAY_STATE);
+    pinMode(RELAY_PIN, OUTPUT);
+    relayWrite(RELAY_PIN, RELAY_STATE);
+    Serial.printf("[PID] Initialized solid-state relay (pin %d) to %d\n", RELAY_PIN, RELAY_STATE);
 
   // pinMode(BACKLIGHT_PIN, OUTPUT);
   // digitalWrite(BACKLIGHT_PIN, HIGH); // We'll just have the backlight on all the time. If you want it to sleep, you can toggle this on/off
@@ -170,4 +179,90 @@ void loop() {
     }
     
     execute_and_advance_state();
+}
+
+void bake() {
+    uint32_t total_time = preheat_time + soak_time + reflow_time + cool_time;
+    Serial.printf("[OVEN] Initiating bake\n");
+    unsigned long reflowStarted = millis();
+    baking = true;
+    while (baking) {
+        time_since_reflow_started = millis() - reflowStarted;
+        if (time_since_reflow_started - last_time_temp_check > time_temp_check) {
+            last_time_temp_check = time_since_reflow_started;
+            printState();
+        }
+
+        //Serial.print("\tSetpoint:"); Serial.print(pid_sp);
+        pid_in = thermocouple.readCelsius();
+        //Serial.print("\tInput:"); Serial.print(pid_in);
+        myPID.Compute();
+        if (pid_out < 0.5) {
+          digitalWrite(RELAY_PIN,LOW);
+        }
+        if (pid_out > 0.5) {
+          digitalWrite(RELAY_PIN,HIGH);
+        }
+        //Serial.print("\tOutput:"); Serial.println(pid_out);
+
+        if(time_since_reflow_started > total_time) {
+            Serial.println("exit at (time_since_reflow_started > total_time)");
+            baking = false;
+        } else if (time_since_reflow_started > (preheat_time + soak_time + reflow_time)) { // preheat and soak and reflow are complete. Start cooldown
+            if (!cooling) {
+                new_state = true;
+                preheating = false, soaking = false, reflowing = false, cooling = true;
+            }
+            pid_sp = cool_temp;
+        } else if (time_since_reflow_started > (preheat_time + soak_time)) { // preheat and soak are complete. Start reflow
+            if (!reflowing) {
+                new_state = true;
+                preheating = false, soaking = false, reflowing = true, cooling = false;
+            }
+            pid_sp = reflow_temp;
+        } else if (time_since_reflow_started > preheat_time) { // preheat is complete. Start soak
+            if (!soaking) {
+                new_state = true;
+                preheating = false, soaking = true, reflowing = false, cooling = false;
+            }
+            pid_sp = soak_temp;
+        } else { // cycle is starting. Start preheat
+            if (!preheating) {
+                new_state = true;
+                preheating = true, soaking = false, reflowing = false, cooling = false;
+            }
+            pid_sp = preheat_temp;
+        }
+    }
+}
+
+void printState(){
+    Serial.printf("Current time: %d\t", time_since_reflow_started);
+    Serial.printf("Current temp: %.2f\t", pid_in);
+    //tft.fillRoundRect(4*gridSize+2, 3*gridSize+2, 2*gridSize-4, gridSize-4, 10, TFT_BLACK);
+    //writeText(4,3,2,1,1,TFT_WHITE, TFT_BLACK, time, 10, true);
+    String tempReading = String(pid_in) + " C";
+    //writeText(4,3,2,1,3,TFT_WHITE, TFT_BLACK, tempReading, 10, true);
+    String currentState;
+    if(preheating){
+        currentState = "Preheating";
+    }
+    if(soaking){
+        currentState = "Soaking";
+    }
+    if(reflowing){
+        currentState = "Reflowing";
+    }
+    if(cooling){
+        currentState = "Cool Down";
+    }
+    Serial.println(currentState);
+
+    if(new_state){
+        //tft.setFont(&FreeMonoBold12pt7b);
+        //tft.setFreeFont(FSB12);
+        new_state = false;
+        //tft.fillRoundRect(1*gridSize+25, 0*gridSize+2, 3*gridSize-4, gridSize-20, 10, TFT_BLACK);
+        //writeText(2,0,2,1, 4, TFT_WHITE, TFT_BLACK, currentState);
+    }
 }

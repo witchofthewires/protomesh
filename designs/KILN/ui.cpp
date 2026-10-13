@@ -14,13 +14,13 @@ static lv_obj_t *confirm_text_label;
 static lv_obj_t *boot_label;
 
 uint8_t is_button_pressed = 0;
-int32_t preheat_time = 120;
+int32_t preheat_time = 12000;
 int32_t preheat_temp = 140; // C
-int32_t soak_time = 60;
+int32_t soak_time = 6000;
 int32_t soak_temp = 170; // C
-int32_t reflow_time = 90;
+int32_t reflow_time = 9000;
 int32_t reflow_temp = 220; // C
-int32_t cool_time = 120;
+int32_t cool_time = 12000;
 int32_t cool_temp = 25; // C
 
 static void touch_cb(lv_event_t *e);
@@ -135,9 +135,9 @@ void draw_setup_menu(void) {
     create_spinbox(&reflow_temp_input, reflow_temp, 0, 300, 3, 0, 50, 150, 170);
 
     write_text(screen, time_label, "time (s)", 120, 20, LV_ALIGN_TOP_MID);
-    create_spinbox(&preheat_time_input, preheat_time, 0, 600, 3, 0, 50, 350, 70);
-    create_spinbox(&soak_time_input, soak_time, 0, 600, 3, 0, 50, 350, 120);
-    create_spinbox(&reflow_time_input, reflow_time, 0, 600, 3, 0, 50, 350, 170);
+    create_spinbox(&preheat_time_input, preheat_time, 0, 600000, 6, 3, 50, 350, 70);
+    create_spinbox(&soak_time_input, soak_time, 0, 600000, 6, 3, 50, 350, 120);
+    create_spinbox(&reflow_time_input, reflow_time, 0, 600000, 6, 3, 50, 350, 170);
 
     confirm_button = lv_obj_create(screen);
     draw_button(screen, confirm_button);
