@@ -32,6 +32,7 @@ This code was tested on the following boards:
 Use the Arduino IDE. Install the following libraries:
 - lvgl by kisvegabor (tested on 9.3.0)
 - MAX6675 library by Adafruit (tested on 1.1.2)
+- PID by Brett Beauregard (tested on 1.2.0)
 Install the following board:
 - 'esp32' by Espressif Systems (tested on 3.0.3)
 Install https://github.com/chipguyhere/ESP32-32E_4inch_display

@@ -20,6 +20,8 @@ int32_t soak_time = 60;
 int32_t soak_temp = 170; // C
 int32_t reflow_time = 90;
 int32_t reflow_temp = 220; // C
+int32_t cool_time = 120;
+int32_t cool_temp = 25; // C
 
 static void touch_cb(lv_event_t *e);
 void write_text(lv_obj_t *screen, lv_obj_t *label, char *text, int x, int y, lv_align_t justification);

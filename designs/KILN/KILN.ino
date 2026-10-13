@@ -39,7 +39,20 @@
 // Build your own application by editing ui_init() in ui.cpp.
 #include "ui.h"
 extern uint8_t is_button_pressed;
-extern int32_t preheat_time, preheat_temp, soak_time, soak_temp, reflow_time, reflow_temp; 
+extern int32_t preheat_time, preheat_temp, soak_time, soak_temp, reflow_time, reflow_temp, cool_time, cool_temp; 
+
+/***********************************************
+ * from https://github.com/aBoyCanDream/Solder-Reflow-Oven/blob/main/PlatformIO/src/main.cpp
+ ***********************************************/
+// Define Variables we'll be connecting to
+double pid_in, pid_out, pid_sp;
+
+#include <PID_v1.h> // Need to add to your library. Search for "PID" by Brett Beauregard
+// Specify the links and initial tuning parameters
+// Awesome explanation of PID and how to tune the values below if you're overshooting or undershooting temp can be found here: https://www.youtube.com/watch?v=hRnofMxEf3Q&pp=ygULZGlnaWtleSBwaWQ%3D
+double Kp=2, Ki=5, Kd=1;
+PID myPID(&pid_in, &pid_out, &pid_sp, Kp, Ki, Kd, DIRECT);
+/********************************************** */
 
 //int SCK = 18;
 int SO = 19;
@@ -130,11 +143,19 @@ void setup() {
 
     Serial.printf("[SPI] MOSI pin %d, MISO pin %d, SCK pin %d, CS pin %d\n", MOSI, MISO, SCK, CS);
 
-    // initialize relay pins
-    //pinMode(RELAY_GND, OUTPUT);
-    //digitalWrite(RELAY_GND, LOW);
+    /* from aBoyCanDream */
+    pid_sp = cool_temp;
+    myPID.SetOutputLimits(0, 1); // tell the PID to range between 0 and the full window size
+    myPID.SetMode(AUTOMATIC); // turn the PID on
+    Serial.printf("[PID] Initialized cybernetic control loop (Kp=%.3f, Ki=%.3f, Kd=%.3f)\n", Kp, Ki, Kd);
+
     pinMode(RELAY_SIGNAL, OUTPUT);
     relayWrite(RELAY_SIGNAL, RELAY_STATE);
+    Serial.printf("[PID] Initialized solid-state relay (pin %d) to %d\n", RELAY_SIGNAL, RELAY_STATE);
+
+  // pinMode(BACKLIGHT_PIN, OUTPUT);
+  // digitalWrite(BACKLIGHT_PIN, HIGH); // We'll just have the backlight on all the time. If you want it to sleep, you can toggle this on/off
+    /*********************/
 
     // Resistive touch varies between panels.  If touch lands in the wrong
     // place, gather raw values with lv_setup.touch().readRaw() and feed the
