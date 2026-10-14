@@ -54,7 +54,7 @@ double Kp=2, Ki=5, Kd=1;
 PID myPID(&pid_in, &pid_out, &pid_sp, Kp, Ki, Kd, DIRECT);
 /********************************************** */
 unsigned long time_since_reflow_started;
-unsigned long time_temp_check = 1000;
+unsigned long time_temp_check = 2000;
 unsigned long last_time_temp_check = 0;
 bool preheating = false, soaking = false, reflowing = false, cooling = false, baking = false, new_state = false;
 
@@ -77,7 +77,7 @@ void execute_and_advance_state(void) {
     Serial.printf("[SYSTEM] State: %d\tButton: %d\n", 
                   state, 
                   is_button_pressed);
-    delay(500);
+    delay(2000);
     switch (state) {
         case STATE_BOOT:
             execute_boot_state();
@@ -188,13 +188,13 @@ void bake() {
     baking = true;
     while (baking) {
         time_since_reflow_started = millis() - reflowStarted;
-        if (time_since_reflow_started - last_time_temp_check > time_temp_check) {
+        if (time_since_reflow_started - last_time_temp_check >= time_temp_check) {
             last_time_temp_check = time_since_reflow_started;
+            pid_in = thermocouple.readCelsius();
             printState();
         }
 
         //Serial.print("\tSetpoint:"); Serial.print(pid_sp);
-        pid_in = thermocouple.readCelsius();
         //Serial.print("\tInput:"); Serial.print(pid_in);
         myPID.Compute();
         if (pid_out < 0.5) {
