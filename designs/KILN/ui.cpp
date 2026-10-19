@@ -14,13 +14,13 @@ static lv_obj_t *confirm_text_label;
 static lv_obj_t *boot_label;
 
 uint8_t is_button_pressed = 0;
-int32_t preheat_time = 12000;
+int32_t preheat_time = 12000000;
 int32_t preheat_temp = 140; // C
-int32_t soak_time = 6000;
+int32_t soak_time = 6000000;
 int32_t soak_temp = 170; // C
-int32_t reflow_time = 9000;
+int32_t reflow_time = 9000000;
 int32_t reflow_temp = 220; // C
-int32_t cool_time = 12000;
+int32_t cool_time = 12000000;
 int32_t cool_temp = 25; // C
 
 static void touch_cb(lv_event_t *e);
