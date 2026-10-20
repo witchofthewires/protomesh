@@ -10,10 +10,10 @@ The Protomesh Collective is an antiprofit formation that builds low-cost Meshtas
 
 ## Educational Materials
 ### Slidedecks
-* [Protomesh Meshtastic 101 Workshop](./education/intro_workshop) - An introductory workshop by Danielle McGuire aimed at adults with no particular technical background.
-* [Mesh Hack Tricks](./education/mesh-hack-tricks/) - An introductory conference presentation by Danielle McGuire aimed at current and aspiring cybersecurity professionals with varying levels of technical expertise and a particular interest in hacking/hardening signal traffic.
-* [Advanced Mesh Hack Tricks](./education/advanced-mesh-hack-tricks/) - A collaboration between Danielle McGuire and Greyfox for the Society of Hackers, which covers RF measurement and granular system settings, intended for an audience that has some experience with Meshtastic, LoRa, and/or radio hacking.
-* [Transmissions A&&C 2026](./education/transmissions26/) - A collaboration between Greyfox and Danielle McGuire for an introductory workshop at the Transmissions: Art&&Code conference hosted by the Frank Ratcheye Studio for Creative Inquiry at Carnegie Mellon University.
+* [Protomesh Meshtastic 101 Workshop](./education/intro_workshop) - An introductory workshop by Danielle McGuire aimed at adults with no particular technical background, offered free to the public 3-5 PM every third Thursday of the month at (Prototype x Oakland)[https://www.eventbrite.com/e/intro-to-meshtastic-x-oakland-tickets-1995610369335].
+* [Mesh Hack Tricks](./education/mesh-hack-tricks/) - An introductory conference presentation by Danielle McGuire for [BSidesPGH 2026](https://www.bsidespgh.com/2026), aimed at current and aspiring cybersecurity professionals with varying levels of technical expertise and a particular interest in hacking/hardening cybernetic signal traffic.
+* [Advanced Mesh Hack Tricks](./education/advanced-mesh-hack-tricks/) - A collaboration between Danielle McGuire and Greyfox for the [Society of Hackers](https://societyofhackers.com/keynotes), which covers RF measurement and granular system settings, intended for an audience that has some experience with Meshtastic, LoRa, and/or radio hacking.
+* [Transmissions A&&C 2026](./education/transmissions26/) - A collaboration between Greyfox and Danielle McGuire for an introductory workshop at the [Transmissions: Art&&Code](https://studioforcreativeinquiry.org/events/artcode-transmissions) conference hosted by the Frank Ratcheye Studio for Creative Inquiry at Carnegie Mellon University.
   
 ## Join the Collective!
 General body meetings of the Protomesh Collective are held from 6-8 PM on the third Thursday of the month at Prototype x Oakland; pre-registration via [Eventbrite](https://www.eventbrite.com/e/the-protomesh-collective-general-meeting-x-oakland-tickets-2002912801105) is encouraged but not required.
