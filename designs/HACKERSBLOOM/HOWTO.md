@@ -4,7 +4,7 @@
 ## The following is not complete!
 
 Quick assembly instructions:
-1. Obtain a Lowe's Hampton Bay 1W Solar Light
+1. Obtain a [Harbor Breeze 1W Solar Light](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) (item #1234868) from Lowe's
 2. Open it up and snip the cables
 3. Unscrew the circuit board
 4. Clip the circuit board between the switch and tiny black integrated circuit
@@ -14,8 +14,22 @@ Quick assembly instructions:
 
 ### Detailed Instructions
 
-#### 1. Obtain a Lowe's Hampton Bay 1W Solar Light
-![Photograph of a Lowe's solar light sitting on a desk](/static/HACKERSBLOOM/lowes_hb_light.jpg "Lowe's Hampton Bay 1W Solar Light")
+#### 1. Obtain a [Harbor Breeze 1W Solar Light](https://www.lowes.com/pd/Harbor-Breeze-60-Lumens-1-Watt-Black-Warm-White-Solar-LED-Spot-light/5018244381) (item #1234868) from Lowe's
+<table>
+<tr><td>
+
+![Photograph of a Lowe's solar light sitting on a desk](/static/HACKERSBLOOM/lowes_hb_light.jpg "Lowe's Harbor Breeze 1W Solar Light")
+
+</td><td>
+During the period of active HACKERSBLOOM development (April 2026 to October 2026/present as of writing), this light is typically on sale for $10 and has been observed as low as $5.
+
+This tutorial is specific to this model of solar light; DO NOT use a different solar light for this tutorial unless you are absolutely confident that you have modified the circuit as necessary to prevent shorts and ensure proper functionality.
+</td></tr>
+</table>
+
+
+
+
 #### 2. Open it up and snip the cables
 #### 3. Unscrew the circuit board
 <table>
