@@ -18,11 +18,11 @@ Quick assembly instructions:
 <table>
 <tr><td>
 
-![Photograph of a Lowe's solar light sitting on a desk](/static/HACKERSBLOOM/lowes_hb_light.jpg "Lowe's Harbor Breeze 1W Solar Light")
+<img alt="Photograph of a Lowe's solar light sitting on a desk" title="Lowe's Harbor Breeze 1W Solar Light" width=320 src="/static/HACKERSBLOOM/lowes_hb_light.jpg">
 
 </td><td>
 During the period of active HACKERSBLOOM development (April 2026 to October 2026/present as of writing), this light is typically on sale for $10 and has been observed as low as $5.
-
+<br><br>
 This tutorial is specific to this model of solar light; DO NOT use a different solar light for this tutorial unless you are absolutely confident that you have modified the circuit as necessary to prevent shorts and ensure proper functionality.
 </td></tr>
 </table>
