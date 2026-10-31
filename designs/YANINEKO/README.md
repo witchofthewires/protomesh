@@ -2,7 +2,7 @@
 
 AKA Fume Hood/Fume Extractor
 
-![Render of an assembled Fume Hood](/static/YANINEKO/fumeHoodAssembled.jpg "Fume Hood")
+![Render of an assembled Fume Hood](/static/YANINEKO/fumeHoodAssembled.jpg "Fume Hood Assembled")
 
 ![Render of parts of an unassembled Fume Hood](/static/YANINEKO/fumeHoodParts.jpg "Fume Hood Parts")
 
@@ -12,7 +12,6 @@ https://makezine.com/projects/diy-fume-hood/
 
 ## BOM ##
     
-total cost ~$400
 - Plywood/OSB/etc: 48"x96" + 48"x48" - $40
     - https://www.homedepot.com/p/Plytanium-11-32-in-x-4-ft-x-8-ft-Rtd-Southern-Yellow-Pine-Plywood-Sheathing-112590/100003677
 - Quarter-round: 4x96" - $20
@@ -22,13 +21,13 @@ total cost ~$400
 - 6" 400+CFM Inline fan - $60 
     - https://www.homedepot.com/p/SKYSHALO-Inline-Duct-Fan-6-in-400-CFM-with-Variable-Speed-Controller-Quiet-AC-Motor-Ventilation-Exhaust-Fan-for-Booster-XLGDFJYCHSAC6J5DVV1-250208/334751996#overlay
 - 36"x36" clear material
-    Acrylic/plexi 
-        $60 - https://www.homedepot.com/p/Falken-Design-36-in-x-36-in-x-1-8-in-Thick-Acrylic-Clear-Sheet-Falken-Design-ACRYLIC-CL-1-8-3636/308669890
+    - Acrylic/plexi 
+        - $60 - https://www.homedepot.com/p/Falken-Design-36-in-x-36-in-x-1-8-in-Thick-Acrylic-Clear-Sheet-Falken-Design-ACRYLIC-CL-1-8-3636/308669890
         - Reacts badly with alcohol
-    Polycarbonate 
-        $99 - https://www.homedepot.com/p/LEXAN-36-in-x-48-in-Polycarbonate-Sheet-1PC3648A/100289077
-    Glass 
-        $42 - https://www.acehardware.com/departments/building-supplies/windows-and-doors/glass-and-acrylic-sheets/11567
+    - Polycarbonate 
+        - $99 - https://www.homedepot.com/p/LEXAN-36-in-x-48-in-Polycarbonate-Sheet-1PC3648A/100289077
+    - Glass 
+        - $42 - https://www.acehardware.com/departments/building-supplies/windows-and-doors/glass-and-acrylic-sheets/11567
         - fragile, but best chemical resistance
 - Brackets?
     - I really don't like screwing into the 'end grain' of <1/2" plywood/osb
@@ -55,5 +54,12 @@ total cost ~$400
         - $100 - https://www.homedepot.com/p/Wudkey-36-in-x-24-in-Silicone-Mat-Heat-Resistant-Mats-for-Countertop-Multipurpose-Large-Silicone-Mats-Gray-PZ4Q87-0/341684517
         - $50 - https://www.annclark.com/products/fat-daddios-silicone-pastry-work-mat-24-x-36
             - not sure if this is actually what we need
+- Storage/table
+    - lock to keep out honest people
+        - something like this to retrofit an existing cabinet
+            - $17 - https://www.homedepot.com/p/First-Watch-Security-5-8-in-Chrome-Cabinet-and-Drawer-Utility-Cam-Lock-1358/202799777
+    - $280 - https://www.mcmaster.com/4927T12/
 
-- Ideally you want the fan by the window, keeping as much of the system at negative pressure as possible
+total cost ~$400
+
+Ideally you want the fan by the window, keeping as much of the system at negative pressure as possible, but as long as you seal everything well it should be fine to put it in the fume hood.
