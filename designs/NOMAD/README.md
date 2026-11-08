@@ -16,6 +16,7 @@ Any working nodes distributed by the Protomesh Collective (after having been ass
 
 ## Version History
 ### Stable Beta Release
+- 1.1.3: Updated case design to include clip ridge, to prevent case from bulging when shut
 - 1.1.2: Updated case design to physically clip shut
 - 1.1.1: Replaced adhesive-joined battery pack design (held together by pressure from case in v1.0.0 which v1.0.0 case is incapable of providing) with spot-welded battery packs
 - 1.1.0: Upgraded board from Heltec ESP-32V3, requiring new case design
