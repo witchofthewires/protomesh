@@ -9,7 +9,7 @@ The NOMAD is constructed from the following components (all prices from October 
 - Board: [Heltec ESP32S3-V4](https://heltec.org/project/wifi-lora-32-v4/) ($19.90)
 - Battery: Custom 18650 battery pack with >=2.5Ah capacity
 - Antenna: [GT-800](https://heltec.org/project/gt-800-whip-antenna/) ($3.90)
-- Case: 3D Printed PETG (TODO - link design)
+- Case: [3D Printed PETG](/cases/NOMAD/stl)
 
 ## Software
 Any working nodes distributed by the Protomesh Collective (after having been assembled, flashed, and configured by community volunteers) utilize the latest stable beta version of the Meshtastic client software (2.7.26 as of 2026 Oct 10) configured to operate in the US region (over 915 MHz).
