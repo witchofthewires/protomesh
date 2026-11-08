@@ -28,14 +28,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.79818235"
-     inkscape:cx="613.89481"
+     inkscape:cx="613.26838"
      inkscape:cy="549.37321"
      inkscape:window-width="1920"
      inkscape:window-height="1121"
      inkscape:window-x="-7"
      inkscape:window-y="-7"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1" />
+     inkscape:current-layer="svg6" />
   <g
      transform="matrix(1, 0, 0, -1, 78.794921875, 249.9306640625)"
      id="g1"
@@ -145,23 +145,23 @@
          inkscape:label="inscription_subtitle"><tspan
            x="24.501925"
            y="242.61728"
-           id="tspan2">a freely 
+           id="tspan7">a freely 
 </tspan><tspan
            x="24.501925"
            y="247.41231"
-           id="tspan3">given gift 
+           id="tspan8">given gift 
 </tspan><tspan
            x="24.501925"
            y="252.20734"
-           id="tspan4">from the 
+           id="tspan9">from the 
 </tspan><tspan
            x="24.501925"
            y="257.00236"
-           id="tspan5">Protomesh 
+           id="tspan10">Protomesh 
 </tspan><tspan
            x="24.501925"
            y="261.79738"
-           id="tspan6">Collective</tspan></text>
+           id="tspan11">Collective</tspan></text>
     </g>
   </g>
   <g
@@ -174,11 +174,23 @@
        fill="none"
        d="M75.795 30.780 L67.500 30.780 67.500 27.780 58.500 27.780 58.500 30.780 49.500 30.780 49.500 27.780 40.500 27.780 40.500 30.780 31.500 30.780 31.500 27.780 22.500 27.780 22.500 30.780 13.500 30.780 13.500 27.780 4.500 27.780 4.500 30.780 -4.500 30.780 -4.500 27.780 -13.500 27.780 -13.500 30.780 -22.500 30.780 -22.500 27.780 -31.500 27.780 -31.500 30.780 -40.500 30.780 -40.500 27.780 -49.500 27.780 -49.500 30.780 -58.500 30.780 -58.500 27.780 -67.500 27.780 -67.500 30.780 -75.795 30.780 -75.795 27.780 -75.795 22.500 -78.795 22.500 -78.795 13.500 -75.795 13.500 -75.795 4.500 -78.795 4.500 -78.795 -4.500 -75.795 -4.500 -75.795 -13.500 -78.795 -13.500 -78.795 -22.500 -75.795 -22.500 -75.795 -27.780 -75.795 -30.780 -67.500 -30.780 -67.500 -27.780 -58.500 -27.780 -58.500 -30.780 -49.500 -30.780 -49.500 -27.780 -40.500 -27.780 -40.500 -30.780 -31.500 -30.780 -31.500 -27.780 -22.500 -27.780 -22.500 -30.780 -13.500 -30.780 -13.500 -27.780 -4.500 -27.780 -4.500 -30.780 4.500 -30.780 4.500 -27.780 13.500 -27.780 13.500 -30.780 22.500 -30.780 22.500 -27.780 31.500 -27.780 31.500 -30.780 40.500 -30.780 40.500 -27.780 49.500 -27.780 49.500 -30.780 58.500 -30.780 58.500 -27.780 67.500 -27.780 67.500 -30.780 75.795 -30.780 75.795 -27.780 75.795 -22.500 78.795 -22.500 78.795 -13.500 75.795 -13.500 75.795 -4.500 78.795 -4.500 78.795 4.500 75.795 4.500 75.795 13.500 78.795 13.500 78.795 22.500 75.795 22.500 75.795 27.780 Z"
        id="path2" />
+    <rect
+       x="-22.768675"
+       y="168.14784"
+       width="44.401752"
+       height="57.001751"
+       stroke="#000000"
+       stroke-width="0.108254"
+       fill="none"
+       id="rect6-8"
+       inkscape:label="heatsink_full_dimensions"
+       transform="matrix(0,1,1,0,0,0)"
+       style="display:inline;fill:none;fill-opacity:1;stroke-width:0.0982489;stroke-dasharray:none" />
   </g>
   <g
      transform="matrix(1, 0, 0, -1, 236.384765625, 249.9306640625)"
      id="g3"
-     inkscape:label="right">
+     inkscape:label="back">
     <path
        stroke="#ff0000"
        stroke-width="0.25"
@@ -188,7 +200,7 @@
     <g
        id="g7"
        inkscape:label="back_cutouts"
-       transform="rotate(-180,1.1652364,-30.780438)">
+       transform="rotate(180,-76.898849,0.21315847)">
       <rect
          style="fill:none;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
          id="rect7"
@@ -234,18 +246,6 @@
            inkscape:label="c14_plug_cutout" />
       </g>
       <rect
-         x="39.360001"
-         y="-69.007858"
-         width="44.401752"
-         height="57.001751"
-         stroke="#000000"
-         stroke-width="0.108254"
-         fill="none"
-         id="rect6-8"
-         inkscape:label="heatsink_full_dimensions"
-         transform="matrix(0,-1,-1,0,0,0)"
-         style="display:inline;fill:none;fill-opacity:1;stroke-width:0.0982489;stroke-dasharray:none" />
-      <rect
          style="fill:none;stroke:#000000;stroke-width:0.1"
          id="rect1"
          width="6.2981639"
@@ -259,7 +259,7 @@
   <g
      transform="matrix(1, 0, 0, -1, 236.384765625, 188.3701171875)"
      id="g4"
-     inkscape:label="left">
+     inkscape:label="top">
     <path
        stroke="#ff0000"
        stroke-width="0.25"
@@ -279,7 +279,7 @@
   <g
      transform="matrix(1, 0, 0, -1, 78.794921875, 78.794921875)"
      id="g5"
-     inkscape:label="bottom">
+     inkscape:label="left">
     <path
        stroke="#ff0000"
        stroke-width="0.25"
@@ -290,7 +290,7 @@
   <g
      transform="matrix(1, 0, 0, -1, 236.384765625, 78.794921875)"
      id="g6"
-     inkscape:label="top">
+     inkscape:label="right">
     <path
        stroke="#ff0000"
        stroke-width="0.25"
