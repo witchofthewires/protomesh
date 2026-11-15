@@ -2,7 +2,7 @@
 
 The Protomesh NOMAD is a portable handheld Meshtastic node that enables hyperresilient decentralized encrypted text messaging. Based on the Heltec ESP32-V4 board, itself built off the HT-RA62 LoRa chipset and the ESP-32S3 Wifi/Bluetooth chipset, it supports 915 MHz LoRa radio, 2.4GHz Wifi, and 2.4GHz Bluetooth connectivity. Capable of operating without access to cellular networks or the Internet, while also able to use MQTT over Internet to talk to nodes all over the United States today, the NOMAD is perfect for disaster recovery, emergency response, and hyperlocal community organization.
 
-![Photograph of a NOMAD handheld node](/static/NOMAD_small.png "NOMAD")
+![Photograph of an assortment of plastic handheld radios, each with a sticker which reads, 'Protomesh NOMAD v1.1.2, Meshtastic Client (4-digit hardware ID), HTv4-915-GT800-3.3'](/static/NOMAD//NOMAD_v1.1.2.jpg "NOMAD v1.1.2")
 
 ## Hardware
 The NOMAD is constructed from the following components (all prices from October 2026 and given before taxes/shipping)
@@ -16,8 +16,9 @@ Any working nodes distributed by the Protomesh Collective (after having been ass
 
 ## Version History
 ### Stable Beta Release
+- 1.1.3: Updated case design to include clip ridge, to prevent case from bulging when shut
 - 1.1.2: Updated case design to physically clip shut
-- 1.1.1: Replaced adhesive-joined battery pack design (held together by pressure from case in v1.0.0 which v1.0.0 case is incapable of providing) with spot-welded battery packs
+- 1.1.1: Replaced adhesive-joined battery pack design (v1.0.0 design utilized spring pressure inside a single rigid case mainbody, an approach which is not compatible with v1.1.0 case design) with spot-welded battery packs
 - 1.1.0: Upgraded board from Heltec ESP-32V3, requiring new case design
 - 1.0.0: Initial working build
 

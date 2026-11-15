@@ -239,6 +239,7 @@ void bake() {
 void printState(){
     Serial.printf("Current time: %d\t", time_since_reflow_started);
     Serial.printf("Current temp: %.2f\t", pid_in);
+    Serial.printf("Oven Relay Status: %d\n", RELAY_PIN);
     //tft.fillRoundRect(4*gridSize+2, 3*gridSize+2, 2*gridSize-4, gridSize-4, 10, TFT_BLACK);
     //writeText(4,3,2,1,1,TFT_WHITE, TFT_BLACK, time, 10, true);
     String tempReading = String(pid_in) + " C";
