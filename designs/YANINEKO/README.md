@@ -10,8 +10,17 @@ AKA Fume Hood/Fume Extractor
 
 https://makezine.com/projects/diy-fume-hood/
 
+## Tools Needed ##
+- Measuring tape/stick
+- Drill
+    - (what size bit?)
+    - Screw driver bit for assembly
+- Saw for cutting boards and trim
+    - Some cuts can be done in store, but there's a limit on how much they'll do
+- Hammer for finishing nails
+
 ## BOM ##
-    
+
 - Plywood/OSB/etc: 48"x96" + 48"x48" - $40
     - https://www.homedepot.com/p/Plytanium-11-32-in-x-4-ft-x-8-ft-Rtd-Southern-Yellow-Pine-Plywood-Sheathing-112590/100003677
 - Quarter-round: 4x96" - $20
@@ -21,44 +30,40 @@ https://makezine.com/projects/diy-fume-hood/
 - 6" 400+CFM Inline fan - $60 
     - https://www.homedepot.com/p/SKYSHALO-Inline-Duct-Fan-6-in-400-CFM-with-Variable-Speed-Controller-Quiet-AC-Motor-Ventilation-Exhaust-Fan-for-Booster-XLGDFJYCHSAC6J5DVV1-250208/334751996#overlay
 - 36"x36" clear material
-    - Acrylic/plexi 
-        - $60 - https://www.homedepot.com/p/Falken-Design-36-in-x-36-in-x-1-8-in-Thick-Acrylic-Clear-Sheet-Falken-Design-ACRYLIC-CL-1-8-3636/308669890
-        - Reacts badly with alcohol
     - Polycarbonate 
         - $99 - https://www.homedepot.com/p/LEXAN-36-in-x-48-in-Polycarbonate-Sheet-1PC3648A/100289077
     - Glass 
         - $42 - https://www.acehardware.com/departments/building-supplies/windows-and-doors/glass-and-acrylic-sheets/11567
         - fragile, but best chemical resistance
-- Brackets?
-    - I really don't like screwing into the 'end grain' of <1/2" plywood/osb
-        - A carpenter I know agrees
-    - But also, we'd only get like 1/4" long screws, which are probably too tiny to hold this together
-        - Carpenter I know also suggested adding extra blocks of wood in the corners to screw into
-    - $15 - https://www.homedepot.com/p/Everbilt-20-Pack-1-1-2-in-Zinc-Plated-Corner-Brace-Value-Pack-24477/327600917
-- Screws (TBD)
-    - 1/4" ish long if we use brackets
-    - 1"+ if we screw into something meatier
+- Screws ($11)
+    - https://www.homedepot.com/p/Grip-Rite-8-x-2-in-Star-Drive-Dual-Flat-Head-Coarse-Thread-Construction-Screws-1-lb-Box-2GCS1/204959257
+- Finishing nails for tacking quarterround in place - $5
+    - https://www.homedepot.com/p/Everbilt-1-1-2-in-Zinc-Plated-Finishing-Nails-250-Pack-810932/205949048
 - 6" dryer pipe
     - $20 - https://www.homedepot.com/p/Lambro-6-in-x-8-ft-Flexible-Aluminum-Semi-Rigid-Double-Lock-Air-Duct-306DL/342727714
 - 6"-> 4" adapter
     - $15 - https://www.homedepot.com/p/Master-Flow-6-in-x-4-in-26-Gauge-Reducer-26R6X4/202191794
-- Outlet strip for power?
-    - $8 - https://www.homedepot.com/p/4-ft-6-Outlet-Power-Strip-with-45-Degree-Flat-Angle-Plug-White-YLPT-90/203353677
 - Something to seal/protect the work surface
-    - Urathane?
-        - bad with isopropol
-    - Steel?
-        - $400 - https://www.mcmaster.com/4189T6/
-        - $125 - https://www.amazon.com/UFAGFDA-Commercial-Stainless-Rectangular-Industrial/dp/B0HDSPR4ZQ
     - Silicon?
         - $100 - https://www.homedepot.com/p/Wudkey-36-in-x-24-in-Silicone-Mat-Heat-Resistant-Mats-for-Countertop-Multipurpose-Large-Silicone-Mats-Gray-PZ4Q87-0/341684517
-        - $50 - https://www.annclark.com/products/fat-daddios-silicone-pastry-work-mat-24-x-36
-            - not sure if this is actually what we need
 - Storage/table
     - lock to keep out honest people
         - something like this to retrofit an existing cabinet
             - $17 - https://www.homedepot.com/p/First-Watch-Security-5-8-in-Chrome-Cabinet-and-Drawer-Utility-Cam-Lock-1358/202799777
+            - $4 - https://www.amazon.com/Refrigerator-Kitchen-Freezer-Cabinets-Doors-No/dp/B0CW962XPG
     - $280 - https://www.mcmaster.com/4927T12/
+    - $free? - something used from ebay or some marketplace
+- Circular saw rental?
+    - $16 for 4 hours - https://www.homedepot.com/p/rental/Makita-Circular-Saw-7-1-4-5377MG/316821620
+
+- Optional upgrades
+    - Outlet strip for power
+        - $8 - https://www.homedepot.com/p/4-ft-6-Outlet-Power-Strip-with-45-Degree-Flat-Angle-Plug-White-YLPT-90/203353677
+        - Or just find/get donation
+
+    - Lighting
+        - Some kind of light strips just below the filter?
+        - very useful for soldering or other detailed work, but should be kept to a minimum during resin printing
 
 total cost ~$400
 
