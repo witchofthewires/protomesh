@@ -1,5 +1,9 @@
 # Protomesh
-The Protomesh Collective is an antiprofit formation that builds low-cost Meshtastic radios for our neighbors and hosts regular introductory workshops on Meshtastic and LoRa communications. Our mission is to help enable resilient decentralized encrypted communications for all, and in pursuit of that mission, we are committed to making all of our designs, knowledge, and resources freely available whenever possible.
+The Protomesh Collective is an *Antiprofit Mutualist Democratic-Federalist Scientific Productive Collective*, with the Dual Mission of deploying radio mesh networks which enable hyper-resilient communications for our neighbors, and fostering technical capabilities amongst our neighbors and the general public. In pursuit of that mission, we are committed to making all of our designs, knowledge, and resources freely available whenever possible. 
+
+## Organization
+The following Chapters are currently working towards the Dual Mission of the Protomesh Collective in accordance with the [Foundational Charter](./charter.pdf):
+* Null Chapter, [Prototype x Oakland](https://prototypepgh.org/) ([charter](./charter.pdf)).
 
 ## Designs 
 ### Meshtastic Nodes
