@@ -3,7 +3,7 @@ The Protomesh Collective is an *Antiprofit Mutualist Democratic-Federalist Scien
 
 ## Organization
 The following Chapters are currently working towards the Dual Mission of the Protomesh Collective in accordance with the [Foundational Charter](./charter.pdf):
-* Null Chapter, [Prototype x Oakland](https://prototypepgh.org/) ([charter](./charter.pdf)).
+* Null Chapter, [Prototype x Oakland](https://prototypepgh.org/), Pittsburgh, PA, USA ([charter](./charter.pdf)).
 
 ## Designs 
 ### Meshtastic/LoRa Nodes
