@@ -6,11 +6,12 @@ The following Chapters are currently working towards the Dual Mission of the Pro
 * Null Chapter, [Prototype x Oakland](https://prototypepgh.org/) ([charter](./charter.pdf)).
 
 ## Designs 
-### Meshtastic Nodes
-* [NOMAD](./designs/NOMAD) - A Heltec ESP32v4-based handheld mobile node intended for everyday carry.
+### Meshtastic/LoRa Nodes
 * [HACKERSBLOOM](./designs/HACKERSBLOOM) - A Heltec T114-based waterproof solar node built from a repurposed 1W Harbor Breeze solar light available at Lowe's.
+* [NOMAD](./designs/NOMAD) - A Heltec ESP32v4-based handheld mobile node intended for everyday carry.
 ### Fabrication Equipment
 * [KILN](./designs/KILN) - A DIY solder reflow oven with touchscreen interface and Wifi/Bluetooth connectivity, and associated firmware.
+* [YANINEKO](./designs/YANINEKO) - A DIY fume hood with 3'x2'x2' ventilated work area 
 
 ## Educational Materials
 ### Slidedecks
